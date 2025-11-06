@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RF‑Global — השקעות נדל"ן בארה"ב | סינסינטי אוהיו</title>
+    <link
+      href="./assets/RF Global Logo Icon.jpg"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="RF‑Global מסייעת למשקיעים לאתר, להשביח ולהשכיר נכסים בסינסינטי, אוהיו. מודל השקעה קבוצתי או בעלות מלאה על שמך — ליווי מקצה לקצה."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RF‑Global — השקעות נדל"ן בארה"ב" />
+    <meta
+      property="og:description"
+      content="איתור, השבחה והשכרה של נכסים בסינסינטי. קבוצתי או בעלות מלאה."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://rfglobal.co.il/" />
+    <meta name="theme-color" content="#0B0F19" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D4AF37",
+              background: {
+                dark: "#0B0F19",
+                light: "#F5F7FB",
+              },
+            },
+            fontFamily: {
+              display: ["Heebo", "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              gold: "0 8px 30px rgba(212,175,55,0.18)",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: 0, transform: "translateY(16px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              fadeUp: "fadeUp 700ms ease both",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-bg,
+        [data-parallax],
+        .animate-fade-up,
+        .scroll-cue {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
+      /* Fade-up + slight blur, staggered via --delay */
+      @keyframes kf-fade-up {
+        0% {
+          opacity: 0;
+          transform: translateY(14px);
+          filter: blur(4px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+      .animate-fade-up {
+        opacity: 0;
+        animation: kf-fade-up 700ms ease both;
+        animation-delay: var(--delay, 0ms);
+      }
+
+      /* Scroll cue pulse */
+      @keyframes kf-cue {
+        0%,
+        100% {
+          transform: translate(-50%, 0);
+          opacity: 0.85;
+        }
+        50% {
+          transform: translate(-50%, -6px);
+          opacity: 1;
+        }
+      }
+      .scroll-cue {
+        animation: kf-cue 1.8s ease-in-out infinite;
+      }
+
+      /* Parallax will apply transform; ensure GPU hint */
+      .hero-bg {
+        transform: translateZ(0);
+      }
+      @media (min-width: 1024px) { .map-wrap { aspect-ratio: 16 / 9; } }
+      .map-frame {
+        width: 100%; height: 100%; border: 0; display: block;
+        filter: hue-rotate(25deg) saturate(115%) brightness(1.05);
+        transition: filter .3s ease;
+      }
+      .group:hover .map-frame { filter: hue-rotate(0deg) saturate(140%) brightness(1.2); }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RF-Global",
+        "url": "https://rfglobal.co.il/",
+        "logo": "https://rfglobal.co.il/logo.png",
+        "sameAs": []
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"מה ההבדל בין המודל הקבוצתי לבעלות מלאה?","acceptedAnswer":{"@type":"Answer","text":"במודל קבוצתי מצטרפים להשקעה משותפת; בבעלות מלאה הנכס נרשם על שמך ו‑RF‑Global גובה תשלום שירות בלבד."}},
+          {"@type":"Question","name":"מה טווח התשואה המקובל?","acceptedAnswer":{"@type":"Answer","text":"תלוי בנכס ובאזור. אנו מכוונים לאיזון תשואה‑סיכון, ללא התחייבות לתשואה מסוימת."}},
+          {"@type":"Question","name":"איך מתבצע התהליך מרחוק?","acceptedAnswer":{"@type":"Answer","text":"באמצעות בדיקות, דו""חות, סיורי וידאו, וצוותים מקומיים — בשקיפות מלאה."}}
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-background-dark text-white font-display">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed top-2 left-2 bg-primary text-background-dark px-3 py-2 rounded-lg"
+      >דלג לתוכן</a
+    >
+
+    <!-- HEADER  -->
+    <header dir="rtl" class="absolute inset-x-0 top-2 z-50 px-4">
+      <div class="mx-auto max-w-4xl">
+        <div
+          class="rounded-xl border border-white/15 bg-white/5 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,.25)]"
+        >
+          <div class="flex h-12 items-center justify-between px-3 sm:px-4">
+            <!-- Brand -->
+            <a href="./index.html" class="flex items-center gap-2">
+              <img
+                src="/assets/RF Global Logo Icon.jpg"
+                alt="RF Global"
+                class="h-7 w-7 object-contain"
+              />
+              <span class="sr-only">RF Global</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav
+              class="hidden md:flex items-center gap-5 lg:gap-7 text-sm"
+              aria-label="ראשי"
+            >
+              <a
+                href="./index.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >בית</a
+              >
+              <a
+                href="./modules.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >מודולים</a
+              >
+              <a
+                href="./properties.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >נכסים/פרויקטים</a
+              >
+              <a
+                href="./about.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >אודות</a
+              >
+            </nav>
+
+            <!-- CTA -->
+            <div class="hidden md:block">
+              <a
+                href="./contact.html"
+                class="inline-flex items-center justify-center rounded-lg bg-[#bd8604] px-4 py-2 text-xs font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+              >
+                קבע פגישה
+              </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button
+              id="menuBtn"
+              class="md:hidden text-[#fefefe] p-1.5 rounded-lg hover:bg-white/10"
+              aria-label="פתיחת תפריט"
+              aria-expanded="false"
+              aria-controls="mobileNav"
+            >
+              <svg
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backdrop -->
+      <div
+        id="mobileBackdrop"
+        class="fixed inset-0 bg-black/40 hidden md:hidden"
+      ></div>
+
+      <!-- Mobile Panel -->
+      <div
+        id="mobileNav"
+        class="md:hidden fixed inset-x-4 top-2 translate-y-[-120%] rounded-2xl border border-white/15 bg-[#0f1a13]/95 backdrop-blur-xl pt-14 pb-6 transition-transform duration-300 will-change-transform"
+        aria-hidden="true"
+      >
+        <button
+          id="closeMenu"
+          class="absolute top-2 left-2 text-[#fefefe] p-2 rounded-lg hover:bg-white/10"
+          aria-label="סגירת תפריט"
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 6l12 12M6 18L18 6"
+            />
+          </svg>
+        </button>
+        <nav
+          class="mx-auto max-w-7xl px-4 grid gap-2 text-lg text-[#fefefe]/90"
+          aria-label="ראשי (נייד)"
+        >
+          <a href="./index.html" class="py-3 hover:text-[#bd8604]">בית</a>
+          <a href="./modules.html" class="py-3 hover:text-[#bd8604]">מודולים</a>
+          <a href="./properties.html" class="py-3 hover:text-[#bd8604]"
+            >נכסים/פרויקטים</a
+          >
+          <a href="./about.html" class="py-3 hover:text-[#bd8604]">אודות</a>
+          <a
+            href="./contact.html"
+            class="mt-3 inline-flex items-center justify-center rounded-lg bg-[#bd8604] px-4 py-3 font-semibold text-[#012b1a] hover:brightness-110"
+          >
+            קבע פגישה
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="flex flex-col items-center">
+      <!-- Hero Section -->
+      <section id="hero" class="relative w-full min-h-[100svh]">
+        <!-- Background image (parallax) -->
+        <img
+          src="./assets/hero.png"
+          alt="שכונה להשקעה בסינסינטי, אוהיו"
+          class="hero-bg absolute inset-0 size-full object-cover will-change-transform"
+          data-parallax
+          data-speed="0.18"
+          loading="eager"
+          fetchpriority="high"
+        />
+
+        <!-- Base deep dark layer -->
+        <div class="absolute inset-0 bg-[#121212]/55"></div>
+
+        <!-- Soft radial light glow (from top-right outward) -->
+        <div
+          class="absolute inset-0 bg-[radial-gradient(120%_80%_at_80%_20%,rgba(245,245,245,0.15),transparent_60)]"
+        ></div>
+
+        <!-- Subtle bottom fade to dark for readability -->
+        <div
+          class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#121212] to-transparent"
+        ></div>
+
+        <!-- Content -->
+        <div class="relative z-10">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6">
+            <div class="min-h-[100svh] pt-20 sm:pt-24 grid items-center">
+              <!-- Right anchor: pushes content to the right on all viewports -->
+              <div class="w-full flex justify-start">
+                <div class="max-w-2xl text-right">
+                  <h1
+                    class="animate-fade-up text-[#fefefe] font-[800] leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl"
+                    style="--delay: 0ms"
+                  >
+                    השקעות נדל״ן חכמות בסינסינטי
+                    <span class="block text-[#bd8604]"
+                      >איתור • השבחה • השכרה/מכירה</span
+                    >
+                  </h1>
+
+                  <p
+                    class="animate-fade-up mt-5 text-[#fefefe]/100 text-base sm:text-lg md:text-xl"
+                    style="--delay: 120ms"
+                  >
+                    מודל קבוצתי או בעלות מלאה על שמכם — ליווי מקצה לקצה, שקיפות
+                    מלאה ותהליך יעיל עד לתשואה.
+                  </p>
+
+                  <div
+                    class="animate-fade-up mt-8 flex flex-col sm:flex-row gap-3 justify-start"
+                    style="--delay: 220ms"
+                  >
+                    <a
+                      href="/contact"
+                      class="inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-6 py-3 md:px-7 md:py-3.5 font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+                    >
+                      לקביעת פגישת היכרות
+                    </a>
+                    <a
+                      href="/modules"
+                      class="inline-flex items-center justify-center rounded-2xl border border-[#fefefe]/30 px-6 py-3 md:px-7 md:py-3.5 font-semibold text-[#fefefe] hover:border-[#fefefe]/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+                    >
+                      ראו את המודלים
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll cue -->
+        <button
+          aria-label="גלילה למטה"
+          class="scroll-cue absolute left-1/2 -translate-x-1/2 bottom-6 size-10 rounded-full border border-white/30 text-white/80 hover:text-white hover:border-white/60 focus:outline-none focus:ring-2 focus:ring-white/40"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            class="mx-auto mt-2 h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 9l6 6 6-6"
+            />
+          </svg>
+        </button>
+      </section>
+
+      <!-- How It Works  -->
+      <section
+        id="how"
+        dir="rtl"
+        class="relative w-full border-t border-white/10 bg-[#121212] py-20 sm:py-24"
+      >
+        <!-- Top connector: gentle fade from hero into this section -->
+        <div
+          class="pointer-events-none absolute inset-x-0 -top-10 h-10 bg-gradient-to-b from-transparent to-[#121212]"
+        ></div>
+
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <header class="text-right mb-12">
+            <h2
+              data-animate
+              data-delay="0"
+              class="text-3xl sm:text-4xl font-extrabold text-[#fefefe] opacity-0 will-change-transform"
+            >
+              איך זה עובד
+            </h2>
+            <p
+              data-animate
+              data-delay="120"
+              class="mt-2 text-sm sm:text-base text-[#fefefe]/80 max-w-xl lg:ml-auto opacity-0 will-change-transform"
+            >
+              כל תהליך השקעה מתחיל באיתור ההזדמנות הנכונה, ממשיך בהשבחת הנכס,
+              ונחתם במימוש חכם — בתשואה ובביטחון.
+            </p>
+          </header>
+
+          <!-- Steps Grid -->
+          <div class="mt-10 grid gap-6 sm:gap-8 md:grid-cols-3">
+            <!-- Step 1 -->
+            <article
+              data-animate
+              data-delay="200"
+              class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-8 hover:border-[#bd8604]/50 transition-all duration-300 opacity-0 will-change-transform"
+            >
+              <div class="text-[#bd8604] mb-4">
+                <span
+                  class="material-symbols-outlined text-5xl"
+                  aria-hidden="true"
+                  >search</span
+                >
+              </div>
+              <h3 class="text-xl font-semibold text-[#fefefe] mb-2">איתור</h3>
+              <p class="text-[#fefefe]/80 text-sm leading-relaxed">
+                בדיקות נאותות, קומפס ו-ARV, ניתוח שכונות, שכירות צפויה וסיכונים
+                — כך אנו מאתרים נכסים עם פוטנציאל אמיתי.
+              </p>
+            </article>
+
+            <!-- Step 2 -->
+            <article
+              data-animate
+              data-delay="300"
+              class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-8 hover:border-[#bd8604]/50 transition-all duration-300 opacity-0 will-change-transform"
+            >
+              <div class="text-[#bd8604] mb-4">
+                <span
+                  class="material-symbols-outlined text-5xl"
+                  aria-hidden="true"
+                  >construction</span
+                >
+              </div>
+              <h3 class="text-xl font-semibold text-[#fefefe] mb-2">השבחה</h3>
+              <p class="text-[#fefefe]/80 text-sm leading-relaxed">
+                תכנון שיפוץ, ניהול קבלנים, פיקוח תקציב ולוחות זמנים — אנו
+                משביחים כל נכס בהתאם לסטנדרט הגבוה ביותר.
+              </p>
+            </article>
+
+            <!-- Step 3 -->
+            <article
+              data-animate
+              data-delay="400"
+              class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-8 hover:border-[#bd8604]/50 transition-all duration-300 opacity-0 will-change-transform"
+            >
+              <div class="text-[#bd8604] mb-4">
+                <span
+                  class="material-symbols-outlined text-5xl"
+                  aria-hidden="true"
+                  >real_estate_agent</span
+                >
+              </div>
+              <h3 class="text-xl font-semibold text-[#fefefe] mb-2">מימוש</h3>
+              <p class="text-[#fefefe]/80 text-sm leading-relaxed">
+                השכרה או מכירה בתשואה מקסימלית, ניהול הנכס ודוחות ביצועים — כך
+                סוגרים מעגל בהצלחה.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modules + Investment Calculator -->
+      <section
+        id="models"
+        dir="rtl"
+        class="w-full border-t border-white/10 bg-[#121212] py-20 sm:py-24"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 space-y-12 sm:space-y-16">
+          <!-- ============ ROW 1: Modules ============ -->
+          <div>
+            <header class="text-right mb-8">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-[#fefefe]">
+                מודלים להשקעה
+              </h2>
+              <p class="mt-2 text-sm sm:text-base text-[#fefefe]/80">
+                בחרו בין השקעה קבוצתית לפיזור סיכון או בעלות מלאה עם ליווי מקצה
+                לקצה.
+              </p>
+            </header>
+
+            <div class="grid gap-6 md:grid-cols-2">
+              <!-- Grouped Investment -->
+              <article
+                data-animate
+                data-delay="100"
+                class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-6 sm:p-7 hover:border-[#bd8604]/50 transition-all duration-300 opacity-0 will-change-transform"
+              >
+                <div class="flex items-center justify-between gap-3">
+                  <span
+                    class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-[#fefefe]/90"
+                    >קבוצתי</span
+                  >
+                  <span class="text-xs text-[#fefefe]/60"
+                    >פיזור סיכונים • הון התחלתי נמוך</span
+                  >
+                </div>
+                <h3 class="mt-3 text-xl font-semibold text-[#fefefe]">
+                  השקעה משותפת בפרויקט
+                </h3>
+                <p class="mt-2 text-sm text-[#fefefe]/80">
+                  מצטרפים לקרן ייעודית. RF-Global רוכשת, משפצת ומשכירה/מוכרת;
+                  הרווחים מחולקים לפי הסכמים.
+                </p>
+                <ul
+                  class="mt-3 space-y-1 pr-5 list-disc text-sm text-[#fefefe]/90"
+                >
+                  <li>פיזור סיכון חכם</li>
+                  <li>הון התחלתי נמוך</li>
+                  <li>ניהול מלא ע״י RF-Global</li>
+                </ul>
+                <div class="mt-5">
+                  <a
+                    href="/contact"
+                    class="inline-flex items-center justify-center rounded-2xl border border-[#fefefe]/30 px-4 py-2 text-sm font-semibold text-[#fefefe] hover:border-[#fefefe]/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  >
+                    בדיקת זכאות
+                  </a>
+                </div>
+              </article>
+
+              <!-- Full Ownership -->
+              <article
+                data-animate
+                data-delay="200"
+                class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-6 sm:p-7 hover:border-[#bd8604]/50 transition-all duration-300 opacity-0 will-change-transform"
+              >
+                <div class="flex items-center justify-between gap-3">
+                  <span
+                    class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-[#fefefe]/90"
+                    >בעלות מלאה</span
+                  >
+                  <span class="text-xs text-[#fefefe]/60"
+                    >שקיפות מלאה בעלויות • שליטה מלאה</span
+                  >
+                </div>
+                <h3 class="mt-3 text-xl font-semibold text-[#fefefe]">
+                  ליווי מקצה לקצה לנכס על שמך
+                </h3>
+                <p class="mt-2 text-sm text-[#fefefe]/80">
+                  איתור נכס, ניהול שיפוץ והשכרה — הכל רשום על שמך. RF-Global
+                  גובה תשלום שירות שקוף בלבד.
+                </p>
+                <ul
+                  class="mt-3 space-y-1 pr-5 list-disc text-sm text-[#fefefe]/90"
+                >
+                  <li>בעלות מלאה וניהול שקוף</li>
+                  <li>תמחור שירות ידוע מראש</li>
+                  <li>בקרה ודוחות לכל אורך הדרך</li>
+                </ul>
+                <div class="mt-5">
+                  <a
+                    href="/contact"
+                    class="inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-4 py-2 text-sm font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+                  >
+                    קבעו שיחה
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- ============ ROW 2: Investment Calculator ============ -->
+    <div>
+        <header class="text-right mb-6 sm:mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#fefefe]">מחשבוני השקעה</h2>
+          <p class="mt-1 text-sm text-[#fefefe]/75">הזינו נתונים ובחנו תרחישים שונים.</p>
+        </header>
+  
+        <div id="invest-calc"
+             class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80
+                    p-6 md:p-8 lg:p-9">
+          <!-- Inner grid: form + charts -->
+          <div id="rf-calc" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Form -->
+            <form id="rf-calc-form" class="space-y-3 text-right" aria-label="מחשבון השקעה" onsubmit="return false">
+              <div>
+                <label for="startAmount" class="block text-sm text-[#fefefe]/85">💵 סכום התחלתי</label>
+                <input id="startAmount" type="number" min="0" step="1000" value="50000"
+                       class="mt-1 w-full rounded-xl bg-white/10 border border-white/15 px-3 py-3 text-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#bd8604]"
+                       placeholder="50,000" />
+              </div>
+  
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="duration" class="block text-sm text-[#fefefe]/85">📆 תקופת ההשקעה</label>
+                  <input id="duration" type="number" min="1" step="1" value="5"
+                         class="mt-1 w-full rounded-xl bg-white/10 border border-white/15 px-3 py-3 text-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#bd8604]" />
+                </div>
+                <div>
+                  <label for="durationType" class="block text-sm text-[#fefefe]/85">⏳ יחידת זמן</label>
+                  <select id="durationType"
+                          class="mt-1 w-full rounded-xl bg-white/10 border border-white/15 px-3 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#bd8604]">
+                    <option value="years" selected>שנים</option>
+                    <option value="months">חודשים</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div>
+                <label for="roi" class="block text-sm text-[#fefefe]/85">📈 שיעור תשואה משוער (% לשנה)</label>
+                <input id="roi" type="number" min="0" max="100" step="0.1" value="8"
+                       class="mt-1 w-full rounded-xl bg-white/10 border border-white/15 px-3 py-3 text-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#bd8604]" />
+              </div>
+  
+              <div>
+                <label for="currency" class="block text-sm text-[#fefefe]/85">💰 מטבע</label>
+                <select id="currency"
+                        class="mt-1 w-full rounded-xl bg-white/10 border border-white/15 px-3 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#bd8604]">
+                  <option value="ILS" selected>₪‎ (ש״ח)</option>
+                  <option value="USD">$ (USD)</option>
+                  <option value="EUR">€ (EUR)</option>
+                </select>
+              </div>
+  
+              <button id="calcBtn" type="button"
+                      class="w-full rounded-2xl bg-[#bd8604] px-5 py-3.5 text-sm font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50">
+                חשב השקעה
+              </button>
+  
+              <p id="result" class="text-lg mt-2 text-[#fefefe]" aria-live="polite"></p>
+            </form>
+  
+            <!-- Charts -->
+            <div class="flex flex-col items-center gap-7">
+              <canvas id="rf-donut" class="w-full max-w-[360px] md:max-w-[420px] aspect-square"></canvas>
+              <canvas id="rf-line" class="w-full h-[260px] sm:h-[320px] md:h-[380px]"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section
+        id="about"
+        dir="rtl"
+        class="w-full border-t border-white/10 bg-[#121212] py-16 sm:py-20"
+      >
+        <div
+          class="mx-auto max-w-6xl px-4 sm:px-6 grid md:grid-cols-2 gap-10 items-start"
+        >
+          <div>
+            <header class="text-right">
+              <span
+                class="inline-block text-xs font-semibold tracking-wider text-[#bd8604]"
+                >מי אנחנו</span
+              >
+              <h2
+                class="mt-1 text-3xl sm:text-4xl font-extrabold text-[#fefefe]"
+              >
+                RF-Global — שותפות, שקיפות ותוצאות
+              </h2>
+              <p class="mt-3 text-sm sm:text-base text-[#fefefe]/80">
+                RF-Global הוקמה ע״י רזי ופאדי, יזמי נדל״ן עם ניסיון ישיר באיתור,
+                השבחה וניהול נכסים בארה״ב. אנו פועלים בגישה ממוקדת-נתונים, עם
+                שותפויות מקומיות חזקות בסינסינטי, ליצירת תהליך יעיל ושקוף מקצה
+                לקצה.
+              </p>
+            </header>
+
+            <!-- Value pills -->
+            <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+              <li
+                class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-4"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-[#fefefe] font-semibold"
+                    >שקיפות וניהול סיכונים</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-[#bd8604]"
+                    aria-hidden
+                    >verified_user</span
+                  >
+                </div>
+                <p class="mt-1 text-sm text-white/70">
+                  דוחות, מעקב ותמחור ברור לכל אורך הדרך.
+                </p>
+              </li>
+              <li
+                class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-4"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-[#fefefe] font-semibold"
+                    >מיקוד תשואה-סיכון</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-[#bd8604]"
+                    aria-hidden
+                    >insights</span
+                  >
+                </div>
+                <p class="mt-1 text-sm text-white/70">
+                  איתור שכונות ונכסים עם יחס ARV מיטבי.
+                </p>
+              </li>
+              <li
+                class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-4"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-[#fefefe] font-semibold"
+                    >רשת קבלנים ומנהלי נכסים</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-[#bd8604]"
+                    aria-hidden
+                    >handshake</span
+                  >
+                </div>
+                <p class="mt-1 text-sm text-white/70">
+                  ביצוע איכותי ולוחות זמנים קצרים בשטח.
+                </p>
+              </li>
+              <li
+                class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-4"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-[#fefefe] font-semibold"
+                    >ליווי מקצה לקצה</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-[#bd8604]"
+                    aria-hidden
+                    >route</span
+                  >
+                </div>
+                <p class="mt-1 text-sm text-white/70">
+                  איתור → השבחה → השכרה/מכירה — באחריות מלאה.
+                </p>
+              </li>
+            </ul>
+
+            <!-- Optional CTA -->
+            <div class="mt-6">
+              <a
+                href="/contact"
+                class="inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-5 py-3 font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+              >
+                בואו נדבר
+              </a>
+            </div>
+          </div>
+
+          <!-- Partners -->
+          <aside
+            class="rounded-3xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/70 to-[#0d0d0d]/70 p-6 sm:p-7"
+          >
+            <div class="text-sm font-semibold text-[#bd8604]">השותפים</div>
+            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+              <!-- Razi -->
+              <article
+                class="rounded-2xl border border-white/10 bg-white/5 p-4"
+              >
+                <img
+                  src="/assets/Razi.png"
+                  alt="רזי — שותף-מייסד"
+                  class="h-45 w-45 rounded-xl object-cover bg-white/10"
+                />
+                <div class="mt-3">
+                  <h3 class="font-semibold text-[#fefefe]">רזי</h3>
+                  <p class="text-sm text-white/70">שותף-מייסד</p>
+                </div>
+              </article>
+              <!-- Fadi -->
+              <article
+                class="rounded-2xl border border-white/10 bg-white/5 p-4"
+              >
+                <img
+                  src="/assets/Fadi.png"
+                  alt="פאדי — שותף-מייסד"
+                  class="h-45 w-45 rounded-xl object-cover bg-white/10"
+                />
+                <div class="mt-3">
+                  <h3 class="font-semibold text-[#fefefe]">פאדי</h3>
+                  <p class="text-sm text-white/70">שותף-מייסד</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Location strip -->
+            <div
+              class="mt-5 rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80"
+            >
+              <div class="flex items-center gap-2">
+                <span
+                  class="material-symbols-outlined text-[#bd8604]"
+                  aria-hidden
+                  >location_on</span
+                >
+                <span>(Remote IL/US) ישראל</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Projects -->
+<section id="projects" dir="rtl" class="w-full border-t border-white/10 bg-[#121212] py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <!-- Header row -->
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-3xl font-extrabold text-[#fefefe]">פרויקטים נבחרים</h2>
+        <a
+  href="/projects.html"
+  class="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl bg-[#bd8604] px-6 sm:px-8 py-3 text-base font-semibold text-[#012b1a]
+         transition-all duration-300 hover:brightness-110 hover:scale-[1.02]
+         focus:outline-none focus:ring-2 focus:ring-[#bd8604]/40"
+>
+  צפו בכל הפרויקטים
+</a>
+      </div>
+  
+      <!-- Grid -->
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card 1 -->
+        <article class="group overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#1a1a1a]/80 to-[#0d0d0d]/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#bd8604]/50">
+          <div class="relative">
+            <img
+              src="./assets/apt1.jpg"
+              alt="נכס ששופץ – פרויקט BR1 בסינסינטי"
+              class="aspect-video w-full object-cover"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+          </div>
+  
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-[#fefefe]">Cincinnati — BR1</h3>
+              <span class="rounded-full bg-[#bd8604]/15 px-2.5 py-1 text-xs font-semibold text-[#bd8604]">נמכר</span>
+            </div>
+  
+            <!-- Meta list -->
+            <ul class="mt-3 space-y-1 text-sm text-[#fefefe]/85">
+              <li><strong class="text-[#fefefe]">תאריך רכישה:</strong> נובמבר 2021</li><br>
+              <li><strong class="text-[#fefefe]">תאריך מכירה:</strong> פברואר 2023</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">שווי רכישה:</strong> $55,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">ערך שיפוץ:</strong> $80,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">שווי מכירה:</strong> $170,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe] ">תשואה:</strong> 25%</li>
+            </ul>
+  
+            <!-- Map -->
+            <div class="mt-4 overflow-hidden rounded-xl border border-white/10">
+              <div class="map-wrap">
+                <iframe
+                  title="מפת הפרויקט BR1"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="map-frame"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.8107611161086!2d-84.58039782330806!3d39.11077833408438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b67630c9f199%3A0xadecd99b0c70ba9b!2s1021%20Beech%20Ave%2C%20Cincinnati%2C%20OH%2045205%2C%20USA!5e0!3m2!1sen!2sil!4v1748096227665!5m2!1sen!2sil">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </article>
+  
+        <!-- Card 2 -->
+        <article class="group overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#1a1a1a]/80 to-[#0d0d0d]/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#bd8604]/50">
+          <div class="relative">
+            <img
+              src="./assets/apt2.jpg"
+              alt="דירה משופצת – פרויקט APT2 בסינסינטי"
+              class="aspect-video w-full object-cover"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+          </div>
+  
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-[#fefefe]">Cincinnati — APT2</h3>
+              <span class="rounded-full bg-[#bd8604]/15 px-2.5 py-1 text-xs font-semibold text-[#bd8604]">נמכר</span>
+            </div>
+  
+            <ul class="mt-3 space-y-1 text-sm text-[#fefefe]/85">
+              <li><strong class="text-[#fefefe]">תאריך רכישה:</strong> ספטמבר 2022</li><br>
+              <li><strong class="text-[#fefefe]">תאריך מכירה:</strong> יוני 2023</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">שווי רכישה:</strong> $55,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">ערך שיפוץ:</strong> $120,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">שווי מכירה:</strong> $230,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">תשואה:</strong> 30%</li>
+            </ul>
+  
+            <div class="mt-4 overflow-hidden rounded-xl border border-white/10">
+              <div class="map-wrap">
+                <iframe
+                  title="מפת הפרויקט APT2"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="map-frame"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.455860157173!2d-84.55609692330485!3d39.209811328208886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88404b3cb29d6651%3A0x97bd194609d5b606!2s6410%20Savannah%20Ave%2C%20North%20College%20Hill%2C%20OH%2045239%2C%20USA!5e0!3m2!1sen!2sil!4v1748096402105!5m2!1sen!2sil">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </article>
+  
+        <!-- Card 3 -->
+        <article class="group overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#1a1a1a]/80 to-[#0d0d0d]/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#bd8604]/50">
+          <div class="relative">
+            <img
+              src="./assets/apt3.jpeg"
+              alt="בית דו קומתי – פרויקט SFH3 בסינסינטי"
+              class="aspect-video w-full object-cover"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+          </div>
+  
+          <div class="p-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-[#fefefe]">Cincinnati — SFH3</h3>
+              <span class="rounded-full bg-[#bd8604]/15 px-2.5 py-1 text-xs font-semibold text-[#bd8604]">בהשכרה</span>
+            </div>
+  
+            <ul class="mt-3 space-y-1 text-sm text-[#fefefe]/85">
+              <li><strong class="text-[#fefefe]">תאריך רכישה:</strong> ספטמבר 2023</li><br>
+              <li><strong class="text-[#fefefe]">תאריך מכירה:</strong> מרץ 2024</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">שווי רכישה:</strong> $98,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">ערך שיפוץ:</strong> $130,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">שווי מכירה:</strong> $312,000</li><br>
+              <li class="ltr"><strong class="text-[#fefefe]">תשואה:</strong>37% </li>
+            </ul>
+  
+            <div class="mt-4 overflow-hidden rounded-xl border border-white/10">
+              <div class="map-wrap">
+                <iframe
+                  title="מפת הפרויקט SFH3"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="map-frame"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.425988283942!2d-84.40270742330559!3d39.18776822951761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884052d4eade19c1%3A0x569eb6c5c16d3771!2s6617%20Sampson%20Ln%2C%20Cincinnati%2C%20OH%2045236%2C%20USA!5e0!3m2!1sen!2sil!4v1748096425239!5m2!1sen!2sil">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+     </div>
+  </section>
+
+      
+
+      <!-- FAQ -->
+      <section id="faq" class="w-full border-t border-white/10 bg-[#121212] py-16 sm:py-20">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 class="text-3xl font-bold">שאלות נפוצות</h2>
+          <div
+            class="mt-6 divide-y divide-white/10 rounded-2xl border border-white/10 overflow-hidden"
+          >
+            <details class="group open:bg-white/5">
+              <summary
+                class="cursor-pointer select-none p-5 text-sm font-semibold hover:bg-white/5"
+              >
+                מה ההבדל בין המודל הקבוצתי לבעלות מלאה?
+              </summary>
+              <div class="p-5 pt-0 text-sm text-white/80">
+                במודל קבוצתי מצטרפים להשקעה משותפת בפרויקט או מספר פרויקטים;
+                בבעלות מלאה הנכס על שמך ו‑RF‑Global גובה תשלום שירות בלבד.
+              </div>
+            </details>
+            <details class="group">
+              <summary
+                class="cursor-pointer select-none p-5 text-sm font-semibold hover:bg-white/5"
+              >
+                מה טווח התשואה המקובל?
+              </summary>
+              <div class="p-5 pt-0 text-sm text-white/80">
+                טווח התשואה משתנה לפי אזור, מצב נכס ואסטרטגיה. אנו שמים דגש על
+                יחס תשואה‑סיכון מאוזן, ללא התחייבות לתשואה.
+              </div>
+            </details>
+            <details class="group">
+              <summary
+                class="cursor-pointer select-none p-5 text-sm font-semibold hover:bg-white/5"
+              >
+                איך מתבצע התהליך מרחוק?
+              </summary>
+              <div class="p-5 pt-0 text-sm text-white/80">
+                בדיקות דיגיטליות, דו"חות מסודרים, סיורי וידאו וגורמי שטח
+                מקומיים. הכל מתועד ומשותף בשקיפות.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section id="contact" class="w-full py-16 bg-[#121212] sm:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="relative isolate">
+            <div
+              class="rounded-full border border-white/10 overflow-hidden shadow-gold"
+            >
+              <div
+                class="relative w-full min-h-[260px] flex items-center justify-center bg-cover bg-center text-center"
+                style="background-image: url('./assets/house1jpg.jpg')"
+                role="img"
+                aria-label="רקע אווירה יוקרתית להשקעות נדל"
+              >
+                <div class="absolute inset-0 bg-background-dark/70"></div>
+                <div
+                  class="relative z-10 flex flex-col items-center justify-center gap-6 px-6 sm:px-10 py-12 max-w-3xl"
+                >
+                  <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                      הצטרפו ל-Newsletter של RF-Global
+                    </h2>
+                    <p class="mt-2 text-sm sm:text-base text-white/80">
+                      קבלו עדכונים על עסקאות חדשות בסינסינטי, ניתוחי שוק וטיפים
+                      להשקעה — ישירות למייל.
+                    </p>
+                  </div>
+                  <form
+                    class="w-full max-w-md"
+                    aria-label="הרשמה לניוזלטר"
+                    onsubmit="event.preventDefault()"
+                  >
+                    <div
+                      class="flex items-stretch gap-2 rounded-full bg-white/10 p-1.5 border border-white/20 backdrop-blur"
+                    >
+                      <label for="nl_email" class="sr-only">אימייל</label>
+                      <input
+                        id="nl_email"
+                        name="email"
+                        type="email"
+                        required
+                        autocomplete="email"
+                        class="flex-1 rounded-full bg-transparent px-4 py-3 text-sm placeholder-white/60 focus:outline-none"
+                        placeholder="האימייל שלך"
+                      />
+                      <button
+                        type="submit"
+                        class="shrink-0 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-background-dark hover:brightness-110"
+                      >
+                        הרשמה
+                      </button>
+                    </div>
+                    <p class="mt-2 text-xs text-white/60">
+                      נשלח רק תוכן רלוונטי. ניתן להסיר בכל עת.
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer dir="rtl" class="relative bg-[#012b1a] text-[#fefefe]">
+      <!-- subtle gold line -->
+      <div
+        class="h-[2px] w-full bg-gradient-to-r from-[#8e6603] via-[#bd8604] to-[#8e6603]"
+      ></div>
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12">
+        <!-- Top row -->
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Brand + slogan -->
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <img
+                src="/assets/RF Global Logo Icon.jpg"
+                alt="RF Global"
+                class="h-10 w-10 object-contain"
+              />
+            </div>
+            <p class="text-sm text-[#fefefe]/80">
+              בונים את העתיד הפיננסי שלך, השקעה אחר השקעה.
+            </p>
+          </div>
+
+          <!-- Quick links (stacked) -->
+          <nav aria-label="ניווט תחתון">
+            <h3 class="mb-3 text-base font-semibold">ניווט מהיר</h3>
+            <ul class="flex flex-col gap-2 text-sm text-[#fefefe]/85">
+              <li><a class="hover:text-[#fefefe]" href="/">בית</a></li>
+              <li>
+                <a class="hover:text-[#fefefe]" href="/modules">מודולים</a>
+              </li>
+              <li>
+                <a class="hover:text-[#fefefe]" href="/properties"
+                  >נכסים/פרויקטים</a
+                >
+              </li>
+              <li><a class="hover:text-[#fefefe]" href="/about">אודות</a></li>
+              <li>
+                <a class="hover:text-[#fefefe]" href="/contact">צור קשר</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Contact info -->
+          <div>
+            <h3 class="mb-3 text-base font-semibold">פרטי קשר</h3>
+            <ul class="space-y-2 text-sm text-[#fefefe]/85">
+              <li class="flex items-center gap-2">
+                <!-- email icon -->
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
+                  />
+                  <path d="m22 8-10 6L2 8" />
+                </svg>
+                <span class="opacity-80 sr-only">אימייל:</span>
+                <a
+                  href="mailto:info@rfglobal.co.il"
+                  class="hover:text-[#fefefe]"
+                  >info@rfglobal.co.il</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <!-- phone icon -->
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.33 1.7.63 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.2a2 2 0 0 1 2.11-.45c.8.3 1.64.51 2.5.63A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span class="opacity-80 sr-only">טלפון:</span>
+                <a href="tel:+972000000000" class="hover:text-[#fefefe]"
+                  >+972-00-000-0000</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <!-- location icon -->
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 21s-7-4.35-7-10a7 7 0 1 1 14 0c0 5.65-7 10-7 10Z"
+                  />
+                  <circle cx="12" cy="11" r="3" />
+                </svg>
+                <span class="opacity-80">מיקום:</span>
+                <span>Cincinnati, Ohio (Remote IL/US)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="w-full max-w-md">
+            <h3 class="text-base font-semibold">הצטרפו לניוזלטר</h3>
+            <p class="mt-1 text-sm text-[#fefefe]/80">
+              קבלו עדכונים על הזדמנויות חדשות וטיפים לשוק סינסינטי.
+            </p>
+            <form
+              class="mt-3"
+              onsubmit="event.preventDefault()"
+              aria-label="הרשמה לניוזלטר"
+            >
+              <div class="flex flex-col sm:flex-row items-stretch gap-2">
+                <label for="nl_footer" class="sr-only">אימייל</label>
+                <input
+                  id="nl_footer"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="האימייל שלך"
+                  class="flex-1 rounded-full bg-transparent px-4 py-3 text-sm placeholder-white/60 focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  class="rounded-full bg-[#bd8604] px-5 py-3 text-sm font-semibold text-[#012b1a] hover:brightness-110 w-full sm:w-auto"
+                >
+                  הרשמה
+                </button>
+              </div>
+              <p class="mt-2 text-xs text-[#fefefe]/60">
+                נשלח רק תוכן רלוונטי. ניתן להסיר בכל עת.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom row -->
+        <div
+          class="mt-10 border-t border-white/10 pt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between text-sm text-[#fefefe]/80 text-center md:text-right"
+        >
+          <div class="order-3 sm:order-1 w-full sm:w-auto">
+            © <span id="yearRF"></span> RF Global — כל הזכויות שמורות
+          </div>
+          <div
+            class="order-2 flex items-center justify-center gap-6 w-full sm:w-auto"
+          >
+            <a class="hover:text-[#fefefe]" href="/privacy-policy"
+              >מדיניות פרטיות</a
+            >
+            <a class="hover:text-[#fefefe]" href="/terms-of-use">תנאי שימוש</a>
+          </div>
+          <div class="order-1 sm:order-3 w-full sm:w-auto">
+            Designed & Developed by
+            <a
+              href="https://flammin.studio"
+              class="underline decoration-[#bd8604]/60 hover:text-[#fefefe]"
+              target="_blank"
+              rel="noopener"
+              >Flammin.Studio</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
