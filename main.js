@@ -241,3 +241,98 @@
   // Initial render
   calc();
 })();
+
+// --- Properties filtering ---
+document.addEventListener("DOMContentLoaded", () => {
+  const filters = document.getElementById("propFilters");
+  if (!filters) return;
+
+  const btns = Array.from(filters.querySelectorAll(".prop-filter"));
+  const cards = Array.from(document.querySelectorAll(".project-card"));
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  // Normalize: remove any stray color classes so JS can control state cleanly
+  btns.forEach((b) => {
+    b.classList.remove(
+      "text-[#fefefe]/90",
+      "text-[#fefefe]/80",
+      "text-[#fefefe]",
+      "bg-[#bd8604]",
+      "text-[#012b1a]"
+    );
+    b.classList.add("text-[#fefefe]/80"); // base (inactive)
+    b.setAttribute("aria-pressed", "false");
+  });
+
+  function setActive(btn) {
+    btns.forEach((b) => {
+      const isActive = b === btn;
+      b.setAttribute("aria-pressed", String(isActive));
+      b.classList.toggle("active", isActive);
+
+      // Colors
+      if (isActive) {
+        b.classList.add("bg-[#bd8604]", "text-[#012b1a]");
+        b.classList.remove("text-[#fefefe]/80");
+      } else {
+        b.classList.remove("bg-[#bd8604]", "text-[#012b1a]");
+        b.classList.add("text-[#fefefe]/80");
+      }
+    });
+  }
+
+  function showCard(card) {
+    card.classList.remove("hidden");
+    if (reduceMotion) return;
+    card.style.opacity = "0";
+    card.style.transition = "opacity .2s ease";
+    requestAnimationFrame(() => {
+      card.style.opacity = "1";
+    });
+  }
+
+  function hideCard(card) {
+    if (reduceMotion) {
+      card.classList.add("hidden");
+      return;
+    }
+    card.style.transition = "opacity .2s ease";
+    card.style.opacity = "0";
+    // Wait for fade then hide
+    setTimeout(() => {
+      card.classList.add("hidden");
+    }, 200);
+  }
+
+  function applyFilter(key) {
+    const k = (key || "all").toLowerCase();
+    cards.forEach((card) => {
+      const status = (card.getAttribute("data-status") || "").toLowerCase();
+      const shouldShow = k === "all" ? true : status === k;
+      if (shouldShow) {
+        showCard(card);
+      } else {
+        hideCard(card);
+      }
+    });
+  }
+
+  // Click handling (delegation)
+  filters.addEventListener("click", (e) => {
+    const btn = e.target.closest(".prop-filter");
+    if (!btn) return;
+    const key = btn.getAttribute("data-filter");
+    setActive(btn);
+    applyFilter(key);
+    history.replaceState(null, "", "#" + key); // optional hash sync
+  });
+
+  // Init from hash or default "all"
+  const initial = (location.hash || "#all").slice(1);
+  const initialBtn =
+    btns.find((b) => b.getAttribute("data-filter") === initial) || btns[0];
+  setActive(initialBtn);
+  applyFilter(initialBtn.getAttribute("data-filter"));
+});
