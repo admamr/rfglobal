@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RF‑Global — מודלי השקעה</title>
+    <link
+      href="./assets/RF-Global-Logo-Icon.jpg"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="RF‑Global מסייעת למשקיעים לאתר, להשביח ולהשכיר נכסים בסינסינטי, אוהיו. מודל השקעה קבוצתי או בעלות מלאה על שמך — ליווי מקצה לקצה."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RF‑Global — השקעות נדל"ן בארהב" />
+    <meta
+      property="og:description"
+      content="איתור, השבחה והשכרה של נכסים בסינסינטי. קבוצתי או בעלות מלאה."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://rfglobal.co.il/" />
+    <meta name="theme-color" content="#0B0F19" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D4AF37",
+              background: {
+                dark: "#0B0F19",
+                light: "#F5F7FB",
+              },
+            },
+            fontFamily: {
+              display: ["Heebo", "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              gold: "0 8px 30px rgba(212,175,55,0.18)",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: 0, transform: "translateY(16px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              fadeUp: "fadeUp 700ms ease both",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-bg,
+        [data-parallax],
+        .animate-fade-up,
+        .scroll-cue {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
+      /* Fade-up + slight blur, staggered via --delay */
+      @keyframes kf-fade-up {
+        0% {
+          opacity: 0;
+          transform: translateY(14px);
+          filter: blur(4px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+      .animate-fade-up {
+        opacity: 0;
+        animation: kf-fade-up 700ms ease both;
+        animation-delay: var(--delay, 0ms);
+      }
+
+      /* Scroll cue pulse */
+      @keyframes kf-cue {
+        0%,
+        100% {
+          transform: translate(-50%, 0);
+          opacity: 0.85;
+        }
+        50% {
+          transform: translate(-50%, -6px);
+          opacity: 1;
+        }
+      }
+      .scroll-cue {
+        animation: kf-cue 1.8s ease-in-out infinite;
+      }
+
+      /* Parallax will apply transform; ensure GPU hint */
+      .hero-bg {
+        transform: translateZ(0);
+      }
+      @media (min-width: 1024px) {
+        .map-wrap {
+          aspect-ratio: 16 / 9;
+        }
+      }
+      .map-frame {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        filter: hue-rotate(25deg) saturate(115%) brightness(1.05);
+        transition: filter 0.3s ease;
+      }
+      .group:hover .map-frame {
+        filter: hue-rotate(0deg) saturate(140%) brightness(1.2);
+      }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RF-Global",
+        "url": "https://rfglobal.co.il/",
+        "logo": "https://rfglobal.co.il/logo.png",
+        "sameAs": []
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"מה ההבדל בין המודל הקבוצתי לבעלות מלאה?","acceptedAnswer":{"@type":"Answer","text":"במודל קבוצתי מצטרפים להשקעה משותפת; בבעלות מלאה הנכס נרשם על שמך ו‑RF‑Global גובה תשלום שירות בלבד."}},
+          {"@type":"Question","name":"מה טווח התשואה המקובל?","acceptedAnswer":{"@type":"Answer","text":"תלוי בנכס ובאזור. אנו מכוונים לאיזון תשואה‑סיכון, ללא התחייבות לתשואה מסוימת."}},
+          {"@type":"Question","name":"איך מתבצע התהליך מרחוק?","acceptedAnswer":{"@type":"Answer","text":"באמצעות בדיקות, דו""חות, סיורי וידאו, וצוותים מקומיים — בשקיפות מלאה."}}
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <header dir="rtl" class="absolute inset-x-0 top-2 z-50 px-4">
+      <div class="mx-auto max-w-4xl">
+        <div
+          class="rounded-3xl border border-white/15 bg-white/5 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,.25)]"
+        >
+          <div class="flex h-12 items-center justify-between px-3 sm:px-4">
+            <!-- Brand -->
+            <a href="./index.html" class="flex items-center gap-2">
+              <img
+                src="./assets/RF-Global-Logo-Icon.jpg"
+                alt="RF Global"
+                class="h-7 w-7 object-contain"
+              />
+              <span class="sr-only">RF Global</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav
+              class="hidden md:flex items-center gap-5 lg:gap-7 text-sm"
+              aria-label="ראשי"
+            >
+              <a
+                href="./index.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >בית</a
+              >
+              <a
+                href="./modules.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >מודולים</a
+              >
+              <a
+                href="./properties.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >נכסים/פרויקטים</a
+              >
+              <a
+                href="./about.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >אודות</a
+              >
+            </nav>
+
+            <!-- CTA -->
+            <div class="hidden md:block">
+              <a
+                href="./contact.html"
+                class="inline-flex items-center justify-center rounded-lg bg-[#bd8604] px-4 py-2 text-xs font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+              >
+                קבע פגישה
+              </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button
+              id="menuBtn"
+              class="md:hidden text-[#fefefe] p-1.5 rounded-lg hover:bg-white/10"
+              aria-label="פתיחת תפריט"
+              aria-expanded="false"
+              aria-controls="mobileNav"
+            >
+              <svg
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backdrop -->
+      <div
+        id="mobileBackdrop"
+        class="fixed inset-0 bg-black/40 hidden md:hidden"
+      ></div>
+
+      <!-- Mobile Panel -->
+      <div
+        id="mobileNav"
+        class="md:hidden fixed inset-x-4 top-2 translate-y-[-120%] rounded-2xl border border-white/15 bg-[#0f1a13]/95 backdrop-blur-xl pt-14 pb-6 transition-transform duration-300 will-change-transform"
+        aria-hidden="true"
+      >
+        <button
+          id="closeMenu"
+          class="absolute top-2 left-2 text-[#fefefe] p-2 rounded-lg hover:bg-white/10"
+          aria-label="סגירת תפריט"
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 6l12 12M6 18L18 6"
+            />
+          </svg>
+        </button>
+        <nav
+          class="mx-auto max-w-7xl px-4 grid gap-2 text-lg text-[#fefefe]/90"
+          aria-label="ראשי (נייד)"
+        >
+          <a href="./index.html" class="py-3 hover:text-[#bd8604]">בית</a>
+          <a href="./modules.html" class="py-3 hover:text-[#bd8604]">מודולים</a>
+          <a href="./properties.html" class="py-3 hover:text-[#bd8604]"
+            >נכסים/פרויקטים</a
+          >
+          <a href="./about.html" class="py-3 hover:text-[#bd8604]">אודות</a>
+          <a
+            href="./contact.html"
+            class="mt-3 inline-flex items-center justify-center rounded-lg bg-[#bd8604] px-4 py-3 font-semibold text-[#012b1a] hover:brightness-110"
+          >
+            קבע פגישה
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN: Modules Page -->
+    <main dir="rtl" class="bg-[#121212] text-[#fefefe]">
+      <section
+        class="mx-auto max-w-6xl px-4 sm:px-6 pt-32 md:pt-36 pb-14 sm:pb-20"
+      >
+        <!-- Page title -->
+        <header class="text-center mb-10 sm:mb-14">
+          <h1
+            class="text-3xl sm:text-4xl font-extrabold tracking-[-0.015em] text-[#bd8604]"
+          >
+            מודלי ההשקעה שלנו
+          </h1>
+          <p class="mt-3 max-w-3xl mx-auto text-sm sm:text-base text-white/80">
+            אנו מציעים מודלים גמישים המתאימים לצרכים שונים של משקיעים, כדי
+            שתמצאו את הדרך המדויקת עבורכם להשקיע בנדל״ן בסינסינטי—בשקיפות מלאה
+            וליווי מקצה לקצה.
+          </p>
+        </header>
+
+        <!-- Cards: Grouped Investment + Full Ownership -->
+        <div class="grid gap-6 md:gap-8 md:grid-cols-2">
+          <!-- השקעה קבוצתית -->
+          <article
+            class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-6 sm:p-8 hover:border-[#bd8604]/50 transition-all"
+          >
+            <div class="text-center">
+              <span
+                class="material-symbols-outlined text-5xl text-[#bd8604]"
+                aria-hidden
+                >groups</span
+              >
+              <h2 class="mt-3 text-2xl font-bold">השקעה קבוצתית</h2>
+            </div>
+
+            <p class="mt-4 text-sm sm:text-base text-white/80">
+              מספר משקיעים מאגדים הון לרכישת נכס, נהנים מנקודת כניסה נגישה יותר,
+              פיזור סיכונים וניהול מקצועי מלא על-ידי RF-Global. אידאלי למשקיעים
+              בתחילת הדרך או לגיוון התיק.
+            </p>
+
+            <!-- תהליך -->
+            <div class="mt-6 pt-6 border-t border-white/10">
+              <h3
+                class="text-lg sm:text-xl font-bold text-[#bd8604] text-center mb-4"
+              >
+                תהליך ההשקעה
+              </h3>
+              <ol class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#bd8604]/20 text-[#bd8604] font-bold"
+                    >1</span
+                  >
+                  <div>
+                    <div class="font-semibold">פגישת ייעוץ והתאמה</div>
+                    <p class="text-sm text-white/70">
+                      הבנת היעדים והצגת קבוצות ההשקעה הזמינות.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#bd8604]/20 text-[#bd8604] font-bold"
+                    >2</span
+                  >
+                  <div>
+                    <div class="font-semibold">הצטרפות לקבוצה</div>
+                    <p class="text-sm text-white/70">
+                      חתימה על הסכמים והעברת ההון להשקעה.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#bd8604]/20 text-[#bd8604] font-bold"
+                    >3</span
+                  >
+                  <div>
+                    <div class="font-semibold">רכישה וניהול</div>
+                    <p class="text-sm text-white/70">
+                      RF-Global מנהלת רכישה, שיפוץ, השכרה/מכירה.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#bd8604]/20 text-[#bd8604] font-bold"
+                    >4</span
+                  >
+                  <div>
+                    <div class="font-semibold">קבלת תשואה</div>
+                    <p class="text-sm text-white/70">
+                      חלוקת רווחים תקופתית ודוחות שקופים.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-6 pt-6 border-t border-white/10">
+              <h3
+                class="text-lg sm:text-xl font-bold text-[#bd8604] text-center mb-4"
+              >
+                שאלות נפוצות
+              </h3>
+              <div class="space-y-3">
+                <details
+                  class="group rounded-xl border border-white/10 p-4 bg-white/5"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-4 list-none"
+                  >
+                    <span class="font-medium">מהו סכום ההשקעה המינימלי?</span>
+                    <span
+                      class="material-symbols-outlined text-[#bd8604] transition-transform group-open:rotate-180"
+                      aria-hidden
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-2 text-sm text-white/75">
+                    משתנה בין פרויקטים; מפורט בפגישת ייעוץ ובהסכמים.
+                  </p>
+                </details>
+                <details
+                  class="group rounded-xl border border-white/10 p-4 bg-white/5"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-4 list-none"
+                  >
+                    <span class="font-medium">כיצד מתחלקים הרווחים?</span>
+                    <span
+                      class="material-symbols-outlined text-[#bd8604] transition-transform group-open:rotate-180"
+                      aria-hidden
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-2 text-sm text-white/75">
+                    יחסית לגודל ההשקעה; חלוקה רבעונית/חצי-שנתית בהתאם לפרויקט.
+                  </p>
+                </details>
+                <details
+                  class="group rounded-xl border border-white/10 p-4 bg-white/5"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-4 list-none"
+                  >
+                    <span class="font-medium">מי מנהל את הנכס בפועל?</span>
+                    <span
+                      class="material-symbols-outlined text-[#bd8604] transition-transform group-open:rotate-180"
+                      aria-hidden
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-2 text-sm text-white/75">
+                    RF-Global—איתור שוכרים, תחזוקה ודיווח שוטף.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <a
+              href="./contact.html"
+              class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-[#bd8604]/20 text-[#bd8604] h-12 font-semibold hover:bg-[#bd8604]/30 transition"
+            >
+              פרטים על השקעה קבוצתית
+            </a>
+          </article>
+
+          <!-- בעלות מלאה -->
+          <article
+            class="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1a1a]/80 to-[#0d0d0d]/80 p-6 sm:p-8 hover:border-[#bd8604]/50 transition-all"
+          >
+            <div class="text-center">
+              <span
+                class="material-symbols-outlined text-5xl text-[#bd8604]"
+                aria-hidden
+                >home</span
+              >
+              <h2 class="mt-3 text-2xl font-bold">בעלות מלאה</h2>
+            </div>
+
+            <p class="mt-4 text-sm sm:text-base text-white/80">
+              רכישת נכס מלא ע״י משקיע יחיד/ישות, שליטה מלאה בכל ההחלטות ובכל
+              הרווחים. אנו מלווים באיתור, בדיקות נאותות, מו״מ וסגירה—וכן בניהול
+              (לבחירתכם).
+            </p>
+
+            <!-- תהליך -->
+            <div class="mt-6 pt-6 border-t border-white/10">
+              <h3
+                class="text-lg sm:text-xl font-bold text-[#bd8604] text-center mb-4"
+              >
+                תהליך ההשקעה
+              </h3>
+              <ol class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#bd8604]/20 text-[#bd8604] font-bold"
+                    >1</span
+                  >
+                  <div>
+                    <div class="font-semibold">אפיון צרכים ותקציב</div>
+                    <p class="text-sm text-white/70">
+                      הגדרת יעדים והתאמת אסטרטגיה.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#bd8604]/20 text-[#bd8604] font-bold"
+                    >2</span
+                  >
+                  <div>
+                    <div class="font-semibold">איתור וניתוח נכסים</div>
+                    <p class="text-sm text-white/70">
+                      הצגת הזדמנויות עם פוטנציאל תשואה גבוה.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#bd8604]/20 text-[#bd8604] font-bold"
+                    >3</span
+                  >
+                  <div>
+                    <div class="font-semibold">רכישה וליווי משפטי</div>
+                    <p class="text-sm text-white/70">
+                      בדיקות, מו״מ, סגירה מסודרת.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#bd8604]/20 text-[#bd8604] font-bold"
+                    >4</span
+                  >
+                  <div>
+                    <div class="font-semibold">בעלות וניהול</div>
+                    <p class="text-sm text-white/70">
+                      ניהול עצמי או באמצעותנו—עם דוחות רציפים.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-6 pt-6 border-t border-white/10">
+              <h3
+                class="text-lg sm:text-xl font-bold text-[#bd8604] text-center mb-4"
+              >
+                שאלות נפוצות
+              </h3>
+              <div class="space-y-3">
+                <details
+                  class="group rounded-xl border border-white/10 p-4 bg-white/5"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-4 list-none"
+                  >
+                    <span class="font-medium">האם חייבים שירות ניהול?</span>
+                    <span
+                      class="material-symbols-outlined text-[#bd8604] transition-transform group-open:rotate-180"
+                      aria-hidden
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-2 text-sm text-white/75">
+                    לא. ניתן לנהל עצמאית, עם חברה חיצונית, או דרך RF-Global.
+                  </p>
+                </details>
+                <details
+                  class="group rounded-xl border border-white/10 p-4 bg-white/5"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-4 list-none"
+                  >
+                    <span class="font-medium">איזה ליווי מספקים?</span>
+                    <span
+                      class="material-symbols-outlined text-[#bd8604] transition-transform group-open:rotate-180"
+                      aria-hidden
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-2 text-sm text-white/75">
+                    איתור, ניתוח, מו״מ, בדיקות נאותות וליווי משפטי/פיננסי עד
+                    להשלמת העסקה.
+                  </p>
+                </details>
+                <details
+                  class="group rounded-xl border border-white/10 p-4 bg-white/5"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-4 list-none"
+                  >
+                    <span class="font-medium">היתרונות של בעלות מלאה?</span>
+                    <span
+                      class="material-symbols-outlined text-[#bd8604] transition-transform group-open:rotate-180"
+                      aria-hidden
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-2 text-sm text-white/75">
+                    שליטה מלאה ובלעדית בנכס וקבלת 100% מהרווחים.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <a
+              href="./contact.html"
+              class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-[#bd8604]/20 text-[#bd8604] h-12 font-semibold hover:bg-[#bd8604]/30 transition"
+            >
+              פרטים על בעלות מלאה
+            </a>
+          </article>
+        </div>
+
+        <!-- Comparison table -->
+        <div class="mt-14 sm:mt-20">
+          <header class="text-center mb-8 sm:mb-10">
+            <h2 class="text-2xl sm:text-3xl font-bold">
+              השוואה בין מודלי ההשקעה
+            </h2>
+            <p
+              class="mt-2 max-w-3xl mx-auto text-sm sm:text-base text-white/80"
+            >
+              להבין את ההבדלים המרכזיים—כדי לבחור במסלול המתאים לכם.
+            </p>
+          </header>
+
+          <div
+            class="overflow-x-auto rounded-2xl border border-white/10 bg-white/5"
+          >
+            <table class="w-full text-right text-sm sm:text-base">
+              <thead class="border-b border-white/10 bg-white/5">
+                <tr>
+                  <th class="py-4 px-4 sm:px-6 font-bold text-[#bd8604] w-1/3">
+                    מאפיין
+                  </th>
+                  <th class="py-4 px-4 sm:px-6 font-bold w-1/3 text-center">
+                    השקעה קבוצתית
+                  </th>
+                  <th class="py-4 px-4 sm:px-6 font-bold w-1/3 text-center">
+                    בעלות מלאה
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 px-4 sm:px-6 font-medium">סכום השקעה</td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    נמוך יחסית
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    גבוה יותר
+                  </td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 px-4 sm:px-6 font-medium">רמת סיכון</td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    מפוזר בין משקיעים
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    מרוכז אצל יחיד
+                  </td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 px-4 sm:px-6 font-medium">ניהול הנכס</td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    ניהול מלא ע״י RF-Global
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    עצמאי/חברת ניהול
+                  </td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 px-4 sm:px-6 font-medium">פוטנציאל תשואה</td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    מתחלק בקבוצה
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    100% למשקיע
+                  </td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-4 px-4 sm:px-6 font-medium">שליטה והחלטות</td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    מוגבלת (החלטות קבוצתיות)
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    מלאה ובלעדית
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-4 px-4 sm:px-6 font-medium">מתאים ל…</td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    משקיעים בתחילת דרכם/פיזור
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center text-white/80">
+                    משקיעים מנוסים עם הון גבוה
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="relative mt-14 sm:mt-20 text-center overflow-hidden">
+          <!-- Pill background image -->
+          <div
+            class="absolute inset-0 mx-auto w-[95%] sm:w-[85%] h-full rounded-[9999px] bg-cover bg-center opacity-100 sm:opacity-25"
+            style="background-image: url('./assets/2.png')"
+            aria-hidden="true"
+          ></div>
+
+          <!-- Content -->
+          <div class="relative z-10 py-12 sm:py-16 px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#fefefe]">
+              מוכנים לבחור מודל ולהתקדם?
+            </h2>
+            <p
+              class="mt-2 max-w-2xl mx-auto text-sm sm:text-base text-white/80"
+            >
+              נשמח לבנות לכם תמהיל השקעות חכם לפי היעדים והתקציב שלכם.
+            </p>
+            <a
+              href="./contact.html"
+              class="mt-6 inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-8 py-3 text-sm sm:text-base font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+            >
+              קבעו פגישת ייעוץ
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer dir="rtl" class="relative bg-[#012b1a] text-[#fefefe]">
+      <!-- subtle gold line -->
+      <div
+        class="h-[2px] w-full bg-gradient-to-r from-[#8e6603] via-[#bd8604] to-[#8e6603]"
+      ></div>
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12">
+        <!-- Top row -->
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Brand + slogan + social -->
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <a href="./index.html">
+                <img
+                  src="./assets/RF-Global-Logo-Icon.jpg"
+                  alt="RF Global"
+                  class="h-10 w-10 object-contain"
+                />
+              </a>
+            </div>
+
+            <h3 class="font-bold text-[#bd8604]">השקעה חכמה – תשואה בטוחה</h3>
+            <p class="text-m text-[#fefefe]">
+              בונים את העתיד הפיננסי שלך, השקעה אחר השקעה.
+            </p>
+
+            <div class="flex gap-5 mt-3">
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                class="text-[#fefefe]/80 hover:text-[#bd8604] transition-colors duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 2 .1v2.3h-1.1c-1 0-1.3.6-1.3 1.2v1.7h2.5l-.4 2.9h-2.1v7A10 10 0 0 0 22 12z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                class="text-[#fefefe]/80 hover:text-[#bd8604] transition-colors duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 1.5A4 4 0 0 0 3.5 7.5v9A4 4 0 0 0 7.5 20.5h9a4 4 0 0 0 4-4v-9a4 4 0 0 0-4-4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm5.5-.8a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                  />
+                </svg>
+              </a>
+
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/972501234567"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+                class="text-[#fefefe]/80 hover:text-[#bd8604] transition-colors duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M20 4.9A9.7 9.7 0 0 0 4.2 18.2L3 22l3.9-1a9.8 9.8 0 0 0 13.2-16zm-8 15a8 8 0 0 1-4.1-1.1l-.3-.2-2.3.6.6-2.2-.2-.3a8 8 0 1 1 6.3 3.2zm4.5-5.9c-.2-.1-1.2-.6-1.3-.6s-.3-.1-.4.1c-.2.3-.5.6-.6.8-.1.1-.2.2-.4.1s-.8-.3-1.5-.9c-.5-.4-.9-1-1-1.2-.1-.1 0-.3.1-.4l.3-.3c.1-.1.1-.3.2-.4 0-.1 0-.3-.1-.4l-.6-1.4c-.1-.4-.3-.4-.5-.4h-.4c-.1 0-.4.1-.6.3-.2.2-.8.7-.8 1.8s.8 2.1.9 2.2c.1.1 1.5 2.3 3.6 3.2.5.2.9.4 1.2.5.5.1.9.1 1.3.1.4 0 1.2-.5 1.3-.9.2-.4.2-.8.2-.9s-.1-.1-.3-.2z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick links (stacked) -->
+          <nav aria-label="ניווט תחתון">
+            <h3 class="mb-3 text-base font-semibold">ניווט מהיר</h3>
+            <ul class="flex flex-col gap-2 text-sm text-[#fefefe]/85">
+              <li><a class="hover:text-[#fefefe]" href="/">בית</a></li>
+              <li>
+                <a class="hover:text-[#fefefe]" href="/modules">מודולים</a>
+              </li>
+              <li>
+                <a class="hover:text-[#fefefe]" href="/properties"
+                  >נכסים/פרויקטים</a
+                >
+              </li>
+              <li><a class="hover:text-[#fefefe]" href="/about">אודות</a></li>
+              <li>
+                <a class="hover:text-[#fefefe]" href="/contact">צור קשר</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Contact info -->
+          <div>
+            <h3 class="mb-3 text-base font-semibold">פרטי קשר</h3>
+            <ul class="space-y-2 text-sm text-[#fefefe]/85">
+              <li class="flex items-center gap-2">
+                <!-- email icon -->
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
+                  />
+                  <path d="m22 8-10 6L2 8" />
+                </svg>
+                <span class="opacity-80 sr-only">אימייל:</span>
+                <a
+                  href="mailto:info@rfglobal.co.il"
+                  class="hover:text-[#fefefe]"
+                  >info@rfglobal.co.il</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <!-- phone icon -->
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.33 1.7.63 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.2a2 2 0 0 1 2.11-.45c.8.3 1.64.51 2.5.63A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span class="opacity-80 sr-only">טלפון:</span>
+                <a href="tel:+972546141198" class="hover:text-[#fefefe]"
+                  >054-6141198</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <!-- 2nd phone icon -->
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.33 1.7.63 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.2a2 2 0 0 1 2.11-.45c.8.3 1.64.51 2.5.63A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span class="opacity-80 sr-only">טלפון:</span>
+                <a href="tel:+97202504457" class="hover:text-[#fefefe]"
+                  >050-2504457</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <!-- location icon -->
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 21s-7-4.35-7-10a7 7 0 1 1 14 0c0 5.65-7 10-7 10Z"
+                  />
+                  <circle cx="12" cy="11" r="3" />
+                </svg>
+                <span>שיח אמין טריף, ג'וליס 2498000</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="w-full max-w-md">
+            <h3 class="text-base font-semibold">הצטרפו לניוזלטר</h3>
+            <p class="mt-1 text-sm text-[#fefefe]/80">
+              קבלו עדכונים על הזדמנויות חדשות וטיפים לשוק סינסינטי.
+            </p>
+            <form
+              class="mt-3"
+              onsubmit="event.preventDefault()"
+              aria-label="הרשמה לניוזלטר"
+            >
+              <div class="flex flex-col sm:flex-row items-stretch gap-2">
+                <label for="nl_footer" class="sr-only">אימייל</label>
+                <input
+                  id="nl_footer"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="האימייל שלך"
+                  class="flex-1 rounded-full bg-transparent px-4 py-3 text-sm placeholder-white/60 focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  class="rounded-full bg-[#bd8604] px-5 py-3 text-sm font-semibold text-[#012b1a] hover:brightness-110 w-full sm:w-auto"
+                >
+                  הרשמה
+                </button>
+              </div>
+              <p class="mt-2 text-xs text-[#fefefe]/60">
+                נשלח רק תוכן רלוונטי. ניתן להסיר בכל עת.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom row -->
+        <div
+          class="mt-10 border-t border-[#bd8604]/80 pt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between text-sm text-[#fefefe]/80 text-center md:text-right"
+        >
+          <div class="order-3 sm:order-1 w-full sm:w-auto">
+            © <span id="yearRF"></span> RF Global — כל הזכויות שמורות
+          </div>
+          <div
+            class="order-2 flex items-center justify-center gap-6 w-full sm:w-auto"
+          >
+            <a class="hover:text-[#fefefe]" href="/privacy-policy"
+              >מדיניות פרטיות</a
+            >
+            <a class="hover:text-[#fefefe]" href="/terms-of-use">תנאי שימוש</a>
+          </div>
+          <div class="order-1 sm:order-3 w-full sm:w-auto">
+            Designed & Developed by
+            <a
+              href="https://flammin.studio"
+              class="underline decoration-[#bd8604]/60 hover:text-[#fefefe]"
+              target="_blank"
+              rel="noopener"
+              >Flammin.Studio</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
