@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="dark">
+<html lang="he" dir="rtl" class="dark" style="scroll-behavior: smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>RF-Global — אודות</title>
-    <link
-      href="./assets/RF-Global-Logo-Icon.jpg"
-      rel="icon"
-      type="image/x-icon"
-    />
+    <title>מדיניות פרטיות – RF-Global</title>
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -17,12 +12,13 @@
         darkMode: "class",
         theme: {
           extend: {
-            colors: { primary: "#bd8604", brand: "#012b1a" },
-            fontFamily: {
-              display: ["Heebo", "Manrope", "ui-sans-serif", "system-ui"],
+            colors: {
+              primary: "#bd8604",
+              brand: "#012b1a",
+              night: "#0B0F19",
             },
-            boxShadow: { card: "0 12px 40px rgba(0,0,0,.25)" },
-            borderRadius: { pill: "9999px" },
+            fontFamily: { display: ["Heebo", "ui-sans-serif", "system-ui"] },
+            boxShadow: { glass: "0 12px 40px rgba(0,0,0,.25)" },
           },
         },
       };
@@ -31,18 +27,31 @@
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
     <style>
       body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
+      .section-anchor {
+        scroll-margin-top: 7rem;
+      }
+      aside nav a.font-bold.text-primary {
+        position: relative;
+      }
+      aside nav a.font-bold.text-primary::before {
+        content: "";
+        position: absolute;
+        right: -0.5rem;
+        top: 0.4rem;
+        height: 0.5rem;
+        width: 0.5rem;
+        background: currentColor;
+        border-radius: 50%;
+        opacity: 0.8;
+      }
     </style>
   </head>
-  <body class="bg-[#0B0F19] text-[#fefefe] font-display">
+  <body class="bg-night text-stone-200 font-display">
     <!-- HEADER  -->
     <header dir="rtl" class="absolute inset-x-0 top-2 z-50 px-4">
       <div class="mx-auto max-w-4xl">
@@ -182,200 +191,284 @@
       </div>
     </header>
 
-    <!-- ======= MAIN ======= -->
-    <main class="mx-auto max-w-6xl px-4 sm:px-6 pt-28 pb-16">
-      <!-- Hero -->
-      <section
-        class="relative overflow-hidden rounded-[28px] border border-white/10 bg-[url('./assets/skyscrapers2.avif')] bg-cover bg-center"
-      >
-        <div class="bg-[#0B0F19]/80">
-          <div class="px-6 sm:px-10 py-14 sm:py-20 text-center">
-            <h1
-              class="text-3xl sm:text-5xl font-black tracking-tight text-primary"
+    <!-- MAIN -->
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 pt-28 pb-16">
+      <!-- Title -->
+      <header class="border-b border-white/10 pb-6 mb-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white">
+          מדיניות פרטיות
+        </h1>
+        <p class="mt-2 text-sm text-stone-400">עדכון אחרון: 24 באוקטובר 2023</p>
+      </header>
+
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr]">
+        <!-- TOC -->
+        <aside class="lg:h-[calc(100vh-10rem)] lg:sticky lg:top-28">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+            <h4 class="text-white font-bold text-base mb-3">תוכן עניינים</h4>
+            <nav class="space-y-2 text-sm">
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#intro"
+                >מבוא</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#collect"
+                >איסוף מידע</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#cookies"
+                >עוגיות (Cookies)</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#use"
+                >כיצד אנו משתמשים במידע</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#legal"
+                >בסיס חוקי לעיבוד</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#share"
+                >שיתוף מידע</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#retention"
+                >שמירת נתונים</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#rights"
+                >הזכויות שלכם</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#security"
+                >אבטחת מידע</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#transfer"
+                >העברות בינלאומיות</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#children"
+                >ילדים</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#changes"
+                >שינויים במדיניות</a
+              >
+              <a
+                class="block text-stone-300 hover:text-primary transition"
+                href="#contact"
+                >יצירת קשר</a
+              >
+            </nav>
+
+            <button
+              id="printBtn"
+              class="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-xl border border-primary/50 bg-primary/10 h-10 px-4 text-primary text-sm font-bold hover:bg-primary/20 transition"
             >
-              שני מייסדים, חזון אחד – להשקיע חכם בסינסינטי
-            </h1>
-            <p
-              class="mt-3 sm:mt-4 max-w-3xl mx-auto text-sm sm:text-lg text-white/85"
-            >
-              RF-Global נולדה מתוך מחויבות לייצר הזדמנויות נדל״ן איכותיות,
-              בשקיפות מלאה וליווי צמוד עד תשואה.
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="shrink-0"
+              >
+                <path
+                  d="M6 9V4h12v5M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2M8 18h8v2H8v-2Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              הדפסה / הורדה
+            </button>
+          </div>
+        </aside>
+
+        <!-- Content -->
+        <article class="max-w-none space-y-10">
+          <!-- Intro -->
+          <section id="intro" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">מבוא</h2>
+            <p class="leading-relaxed">
+              RF-Global ("אנחנו", "שלנו") מחויבת להגנה על פרטיותכם. מסמך זה
+              מסביר כיצד אנו אוספים, משתמשים, משתפים ומגנים על מידע בעת השימוש
+              באתר ובשירותים שלנו. אם אינכם מסכימים למדיניות זו, אנא הימנעו
+              משימוש באתר.
             </p>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <!-- Founders -->
-      <section class="mt-12 sm:mt-16">
-        <h2 class="text-center text-2xl sm:text-3xl font-bold">
-          הכירו את המייסדים
-        </h2>
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Razi -->
-          <article
-            class="rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-card p-6"
-          >
-            <div class="flex flex-col items-center text-center gap-4">
-              <div
-                class="h-32 w-32 rounded-full border-2 border-primary bg-cover bg-center"
-                style="background-image: url('./assets/Razi.png')"
-                aria-hidden="true"
-              ></div>
-              <div>
-                <h3 class="text-xl font-bold">רזי</h3>
-                <p class="text-primary font-medium">
-                  מייסד וסמנכ״ל השקעות ראשי
-                </p>
-              </div>
-              <p class="text-white/80 text-sm sm:text-base max-w-prose">
-                ניסיון רב בתחום הרכישה, ניהול והשבחת נכסים—מוביל את אסטרטגיית
-                ההשקעות והצמיחה של RF-Global.
-              </p>
-            </div>
-          </article>
+          <!-- Collection -->
+          <section id="collect" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">איסוף מידע</h2>
+            <ul class="list-disc pr-5 space-y-2 leading-relaxed">
+              <li>
+                <b>מידע מזהה אישית:</b> שם, אימייל, טלפון ותוכן פנייה שנמסרו
+                בטפסים (למשל בעמוד “צור קשר”).
+              </li>
+              <li>
+                <b>נתוני שימוש ומכשיר:</b> כתובת IP, סוג דפדפן/מכשיר, עמודים
+                נצפים, הפניות/יציאות, חותמות זמן.
+              </li>
+              <li>
+                <b>מידע עסקי מרצון:</b> תחומי עניין להשקעה, תקציב, מודול מועדף
+                וכד'.
+              </li>
+            </ul>
+          </section>
 
-          <!-- Fadi -->
-          <article
-            class="rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-card p-6"
-          >
-            <div class="flex flex-col items-center text-center gap-4">
-              <div
-                class="h-32 w-32 rounded-full border-2 border-primary bg-cover bg-center"
-                style="background-image: url('./assets/Fadi.png')"
-                aria-hidden="true"
-              ></div>
-              <div>
-                <h3 class="text-xl font-bold">פאדי</h3>
-                <p class="text-primary font-medium">מייסד ומנהל תפעול</p>
-              </div>
-              <p class="text-white/80 text-sm sm:text-base max-w-prose">
-                מומחה בניתוח שווקים ותפעול—דואג לכל פרט: בדיקות נאותות, ניהול,
-                ודיווח שקוף למשקיעים.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Story -->
-      <section class="mt-12 sm:mt-16 text-center">
-        <h2 class="text-2xl sm:text-3xl font-bold">הסיפור שלנו</h2>
-        <p class="mt-3 max-w-3xl mx-auto text-white/80 text-sm sm:text-lg">
-          זיהינו את הפוטנציאל שבשוק סינסינטי והקמנו פלטפורמה שמחברת משקיעים
-          להזדמנויות מניבות. השילוב בין אנליזה מעמיקה, ניהול מוקפד ושקיפות
-          מלאה—הוא זה שמייצר תוצאות יציבות לאורך זמן.
-        </p>
-      </section>
-
-      <!-- Mission & Vision -->
-      <section class="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="rounded-2xl border border-white/10 bg-white/[0.06] p-6">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-primary text-3xl"
-              >rocket_launch</span
-            >
-            <h3 class="text-xl font-bold">המשימה שלנו</h3>
-          </div>
-          <p class="mt-2 text-white/80 text-sm sm:text-base">
-            להעצים משקיעים באמצעות השקעות נדל״ן איכותיות, שירות אישי ושקוף,
-            והובלה מקצועית משלב היעד ועד התשואה.
-          </p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/[0.06] p-6">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-primary text-3xl"
-              >visibility</span
-            >
-            <h3 class="text-xl font-bold">החזון שלנו</h3>
-          </div>
-          <p class="mt-2 text-white/80 text-sm sm:text-base">
-            להיות הכתובת האמינה ביותר למשקיעים ישראלים באוהיו—עם צמיחה בת-קיימא
-            והשפעה קהילתית חיובית.
-          </p>
-        </div>
-      </section>
-
-      <!-- Values -->
-      <section class="mt-12 sm:mt-16">
-        <h2 class="text-center text-2xl sm:text-3xl font-bold">הערכים שלנו</h2>
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            class="rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-center"
-          >
-            <span class="material-symbols-outlined text-primary text-4xl"
-              >verified_user</span
-            >
-            <h3 class="mt-2 text-lg font-bold">אמון</h3>
-            <p class="text-white/80 text-sm">
-              שקיפות מלאה וקשר רציף עם המשקיעים בכל שלב.
+          <!-- Cookies -->
+          <section id="cookies" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">
+              עוגיות (Cookies)
+            </h2>
+            <p class="leading-relaxed">
+              אנו משתמשים בעוגיות וטכנולוגיות דומות לתפעול האתר, אבטחה, אנליטיקה
+              ושיפור חוויה. ניתן לנהל העדפות דרך דפדפן/חוסמי עוגיות; חסימה חלקית
+              עלולה לפגוע בתפקוד האתר.
             </p>
-          </div>
-          <div
-            class="rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-center"
-          >
-            <span class="material-symbols-outlined text-primary text-4xl"
-              >diamond</span
-            >
-            <h3 class="mt-2 text-lg font-bold">יושרה</h3>
-            <p class="text-white/80 text-sm">
-              סטנדרטים אתיים מחמירים—הבסיס לכל החלטה.
-            </p>
-          </div>
-          <div
-            class="rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-center"
-          >
-            <span class="material-symbols-outlined text-primary text-4xl"
-              >trending_up</span
-            >
-            <h3 class="mt-2 text-lg font-bold">צמיחה</h3>
-            <p class="text-white/80 text-sm">
-              איתור הזדמנויות מתמשך ושיפור מתמיד בביצועים.
-            </p>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <!-- CTA -->
-      <section class="mt-14 sm:mt-20">
-        <div
-          class="relative overflow-hidden rounded-[28px] border border-white/10 bg-cover bg-center"
-          style="
-            background-image: linear-gradient(
-                rgba(11, 15, 25, 0.6),
-                rgba(11, 15, 25, 0.6)
-              ),
-              url('./assets/houses.avif');
-          "
+          <!-- Use -->
+          <section id="use" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">
+              כיצד אנו משתמשים במידע
+            </h2>
+            <ul class="list-disc pr-5 space-y-2 leading-relaxed">
+              <li>מתן מענה לפניות ותיאום שיחות/פגישות.</li>
+              <li>שיפור האתר, השירותים וחוויית המשתמש.</li>
+              <li>
+                שליחת עדכונים ותוכן שיווקי (בכפוף להסכמה ויכולת הסרה בכל עת).
+              </li>
+              <li>זיהוי/מניעת הונאה, אבטחה, עמידה בדרישות חוק.</li>
+            </ul>
+          </section>
+
+          <!-- Legal basis -->
+          <section id="legal" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">
+              בסיס חוקי לעיבוד
+            </h2>
+            <p class="leading-relaxed">
+              אנו מעבדים מידע על בסיס אחד או יותר מהבאים: (א) הסכמה, (ב) קיום
+              חוזה/נקיטת צעדים לפני כריתת חוזה, (ג) אינטרס לגיטימי (למשל שיפור
+              שירותים, אבטחה), (ד) עמידה בהתחייבות חוקית. ניתן לבטל הסכמה בכל
+              עת.
+            </p>
+          </section>
+
+          <!-- Sharing -->
+          <section id="share" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">שיתוף מידע</h2>
+            <p class="leading-relaxed">
+              אנו עשויים לשתף מידע עם ספקי שירות (אירוח, אנליטיקה, תמיכה) תחת
+              מחויבויות סודיות ועיבוד נתונים; וכן כאשר נדרש לפי דין, או בהקשר
+              עסקה תאגידית. איננו מוכרים מידע אישי.
+            </p>
+          </section>
+
+          <!-- Retention -->
+          <section id="retention" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">שמירת נתונים</h2>
+            <p class="leading-relaxed">
+              נשמור מידע אישי רק כל עוד הוא נדרש למטרות לשמן נאסף, לעמידה
+              בדרישות דין, ליישוב מחלוקות ולאכיפת הסכמים.
+            </p>
+          </section>
+
+          <!-- Rights -->
+          <section id="rights" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">הזכויות שלכם</h2>
+            <p class="leading-relaxed">
+              בכפוף לדין החל, תוכלו לבקש גישה, תיקון, מחיקה, הגבלת עיבוד,
+              התנגדות לעיבוד, או ניידות נתונים; וכן לבטל הסכמה לדיוור שיווקי.
+              נפעל למענה תוך לוחות הזמנים הקבועים בדין.
+            </p>
+          </section>
+
+          <!-- Security -->
+          <section id="security" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">אבטחת מידע</h2>
+            <p class="leading-relaxed">
+              אנו מיישמים אמצעי הגנה מנהליים, טכניים ופיזיים סבירים. אף מנגנון
+              אינו חסין לחלוטין—לכן איננו יכולים להבטיח אבטחה מוחלטת.
+            </p>
+          </section>
+
+          <!-- Transfers -->
+          <section id="transfer" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">
+              העברות בינלאומיות
+            </h2>
+            <p class="leading-relaxed">
+              ייתכן שהמידע יעובד במדינות מחוץ למדינת מושבכם. כאשר נדרש, ניישם
+              מנגנוני הגנה מתאימים (למשל הסכמי עיבוד/סעיפים חוזיים סטנדרטיים).
+            </p>
+          </section>
+
+          <!-- Children -->
+          <section id="children" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">ילדים</h2>
+            <p class="leading-relaxed">
+              האתר אינו מיועד לילדים מתחת לגיל 18. אם נודע לנו שאספנו מידע
+              בניגוד למדיניות זו, נפעל למחיקתו.
+            </p>
+          </section>
+
+          <!-- Changes -->
+          <section id="changes" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">
+              שינויים במדיניות
+            </h2>
+            <p class="leading-relaxed">
+              מעת לעת נעדכן את מדיניות הפרטיות. נציין את “העדכון האחרון” בראש
+              העמוד והעדכונים ייכנסו לתוקף עם פרסומם באתר.
+            </p>
+          </section>
+
+          <!-- Contact -->
+          <section id="contact" class="section-anchor">
+            <h2 class="text-primary text-2xl font-bold pb-2">יצירת קשר</h2>
+            <p class="leading-relaxed">
+              לשאלות או בקשות בנושא פרטיות ניתן לפנות אלינו בעמוד
+              <a
+                href="./contact.html"
+                class="text-primary underline underline-offset-4"
+                >“צור קשר”</a
+              >
+              או במייל:
+              <a
+                href="mailto:privacy@rfglobal.co.il"
+                class="text-primary underline underline-offset-4"
+                >rf.global901@gmail.com</a
+              >.
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <!-- Back to top -->
+      <div class="mt-12 flex justify-center">
+        <a
+          href="#top"
+          class="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90 hover:bg-white/10"
         >
-          <!-- Gold glow -->
-          <div
-            class="absolute inset-0 -z-10 grid place-items-center opacity-25"
-          >
-            <div
-              class="h-[260px] w-[90%] max-w-4xl rounded-[999px] bg-gradient-to-r from-[#8e6603] via-[#bd8604] to-[#8e6603] blur-3xl"
-            ></div>
-          </div>
-
-          <!-- content -->
-          <div class="relative px-6 sm:px-10 py-12 sm:py-16 text-center">
-            <h3 class="text-3xl sm:text-3xl font-bold text-[#fefefe]">
-              מוכנים להתחיל להשקיע?
-            </h3>
-            <p
-              class="mt-2 text-white/100 max-w-3xl mx-auto text-lg sm:text-base"
-            >
-              גלו את הזדמנויות ההשקעה שלנו ובנו יחד איתנו את האסטרטגיה שתעזור
-              לכם לצמוח בביטחון.
-            </p>
-            <a
-              href="./contact.html"
-              class="mt-6 inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-6 py-3 text-sm font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
-            >
-              קבעו פגישת ייעוץ
-            </a>
-          </div>
-        </div>
-      </section>
+          חזרה לראש העמוד
+        </a>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -608,6 +701,6 @@
       </div>
     </footer>
 
-    <script src="./main.js"></script>
+    <script src="./privacy.html"></script>
   </body>
 </html>

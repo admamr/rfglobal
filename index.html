@@ -176,7 +176,7 @@
               <img
                 src="./assets/RF-Global-Logo-Icon.jpg"
                 alt="RF Global"
-                class="h-7 w-7 object-contain"
+                class="h-8 w-10 object-contain hover:scale-110 transition-all"
               />
               <span class="sr-only">RF Global</span>
             </a>
@@ -205,6 +205,11 @@
                 href="./about.html"
                 class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
                 >אודות</a
+              >
+              <a
+                href="./our-blog/blog.html"
+                class="text-[#fefefe]/90 hover:text-[#bd8604] transition"
+                >בלוג</a
               >
             </nav>
 
@@ -253,7 +258,7 @@
       <!-- Mobile Panel -->
       <div
         id="mobileNav"
-        class="md:hidden fixed inset-x-4 top-2 translate-y-[-120%] rounded-2xl border border-white/15 bg-[#0f1a13]/95 backdrop-blur-xl pt-14 pb-6 transition-transform duration-300 will-change-transform"
+        class="md:hidden fixed inset-x-4 top-2 translate-y-[-120%] rounded-2xl border border-white/15 bg-bg--dark/95 backdrop-blur-xl pt-14 pb-6 transition-transform duration-300 will-change-transform"
         aria-hidden="true"
       >
         <button
@@ -285,6 +290,7 @@
             >נכסים/פרויקטים</a
           >
           <a href="./about.html" class="py-3 hover:text-[#bd8604]">אודות</a>
+          <a href="./our-blog/blog.html" class="py-3 hover:text-[#bd8604]">בלוג</a>
           <a
             href="./contact.html"
             class="mt-3 inline-flex items-center justify-center rounded-xl bg-[#bd8604] px-4 py-3 font-semibold text-[#012b1a] hover:brightness-110"
@@ -297,81 +303,102 @@
 
     <main id="main" class="flex flex-col items-center">
       <!-- Hero Section -->
-      <section id="hero" class="relative w-full min-h-[100svh]">
-        <!-- Background image (parallax) -->
-        <img
-          src="./assets/hero.png"
-          alt="שכונה להשקעה בסינסינטי, אוהיו"
-          class="hero-bg absolute inset-0 size-full object-cover will-change-transform"
-          data-parallax
-          data-speed="0.18"
-          loading="eager"
-          fetchpriority="high"
-        />
+<section id="hero" class="relative w-full min-h-[100svh]">
+  <!-- Responsive Background Images -->
+  <picture>
+    <!-- Mobile (max 640px) -->
+    <source
+      srcset="./assets/mobile-hero.avif"
+      media="(max-width: 640px)"
+      type="image/avif"
+      data-parallax
+      data-speed="0.18"
+      loading="lazy"
+      fetchpriority="high"
+    />
+    <!-- Tablet (641px to 1024px) -->
+    <source
+      srcset="./assets/tablet-hero.avif"
+      media="(max-width: 1024px)"
+      type="image/avif"
+      data-parallax
+      data-speed="0.18"
+      loading="lazy"
+      fetchpriority="high"
+    />
+    <!-- Desktop (above 1024px) -->
+    <img
+      src="./assets/desktop-hero.avif"
+      alt="שכונה להשקעה בסינסינטי, אוהיו"
+      class="hero-bg absolute inset-0 size-full object-cover will-change-transform"
+      data-parallax
+      data-speed="0.18"
+      loading="lazy"
+      fetchpriority="high"
+    />
+  </picture>
 
-        <!-- Base deep dark layer -->
-        <div class="absolute inset-0 bg-[#121212]/55"></div>
+  <!-- Base deep dark layer -->
+  <div class="absolute inset-0 bg-[#121212]/55"></div>
 
-        <!-- Soft radial light glow (from top-right outward) -->
-        <div
-          class="absolute inset-0 bg-[radial-gradient(120%_80%_at_80%_20%,rgba(245,245,245,0.15),transparent_60)]"
-        ></div>
+  <!-- Soft radial light glow -->
+  <div
+    class="absolute inset-0 bg-[radial-gradient(120%_80%_at_80%_20%,rgba(245,245,245,0.15),transparent_60)]"
+  ></div>
 
-        <!-- Subtle bottom fade to dark for readability -->
-        <div
-          class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#121212] to-transparent"
-        ></div>
+  <!-- Subtle bottom fade for readability -->
+  <div
+    class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#121212] to-transparent"
+  ></div>
 
-        <!-- Content -->
-        <div class="relative z-10">
-          <div class="mx-auto max-w-7xl px-4 sm:px-6">
-            <div class="min-h-[100svh] pt-20 sm:pt-24 grid items-center">
-              <!-- Right anchor: pushes content to the right on all viewports -->
-              <div class="w-full flex justify-start">
-                <div class="max-w-2xl text-right">
-                  <h1
-                    class="animate-fade-up text-[#fefefe] font-[800] leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl"
-                    style="--delay: 0ms"
-                  >
-                    השקעות נדל״ן חכמות בסינסינטי
-                    <span class="block text-[#bd8604]"
-                      >איתור • השבחה • השכרה/מכירה</span
-                    >
-                  </h1>
+  <!-- Content -->
+  <div class="relative z-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="min-h-[100svh] pt-20 sm:pt-24 grid items-center">
+        <div class="w-full flex justify-start">
+          <div class="max-w-2xl text-right">
+            <h1
+              class="animate-fade-up text-[#fefefe] font-[800] leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl"
+              style="--delay: 0ms"
+            >
+              השקעות נדל״ן חכמות בסינסינטי
+              <span class="block text-[#bd8604]"
+                >איתור • השבחה • השכרה/מכירה</span
+              >
+            </h1>
 
-                  <p
-                    class="animate-fade-up mt-5 text-[#fefefe]/100 text-base sm:text-lg md:text-xl"
-                    style="--delay: 120ms"
-                  >
-                    מודל קבוצתי או בעלות מלאה על שמכם — ליווי מקצה לקצה, שקיפות
-                    מלאה ותהליך יעיל עד לתשואה.
-                  </p>
+            <p
+              class="animate-fade-up mt-5 text-[#fefefe]/100 text-base sm:text-lg md:text-xl"
+              style="--delay: 120ms"
+            >
+              מודל קבוצתי או בעלות מלאה על שמכם — ליווי מקצה לקצה, שקיפות מלאה ותהליך יעיל עד לתשואה.
+            </p>
 
-                  <div
-                    class="animate-fade-up mt-8 flex flex-col sm:flex-row gap-3 justify-start"
-                    style="--delay: 220ms"
-                  >
-                    <a
-                      href="./contact.html"
-                      class="inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-6 py-3 md:px-7 md:py-3.5 font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
-                    >
-                      לקביעת פגישת היכרות
-                    </a>
-                    <a
-                      href="./modules.html"
-                      class="inline-flex items-center justify-center rounded-2xl border border-[#fefefe]/30 px-6 py-3 md:px-7 md:py-3.5 font-semibold text-[#fefefe] hover:border-[#fefefe]/60 focus:outline-none focus:ring-2 focus:ring-white/30"
-                    >
-                      ראו את המודלים
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div
+              class="animate-fade-up mt-8 flex flex-col sm:flex-row gap-3 justify-start"
+              style="--delay: 220ms"
+            >
+              <a
+                href="./contact.html"
+                class="inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-6 py-3 md:px-7 md:py-3.5 font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+              >
+                לקביעת פגישת היכרות
+              </a>
+              <a
+                href="./modules.html"
+                class="inline-flex items-center justify-center rounded-2xl border border-[#fefefe]/30 px-6 py-3 md:px-7 md:py-3.5 font-semibold text-[#fefefe] hover:border-[#fefefe]/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+              >
+                ראו את המודלים
+              </a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-       <!-- Scroll cue -->
-       <a
+  <!-- Scroll cue -->
+  <a
     href="#models"
     aria-label="גלילה למטה"
     class="scroll-cue absolute left-1/2 -translate-x-1/2 bottom-6 size-10 rounded-full border border-white/30 text-white/80 hover:text-white hover:border-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition-all z-20"
@@ -380,8 +407,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   </a>
-
-      </section>
+</section>
 
       <!-- How It Works  -->
       <section
@@ -1185,6 +1211,11 @@
                 <a class="hover:text-[#fefefe]" href="./about.html">אודות</a>
               </li>
               <li>
+                <a class="hover:text-[#fefefe]" href="/our-blog/blog.html"
+                  >בלוג</a
+                >
+              </li>
+              <li>
                 <a class="hover:text-[#fefefe]" href="./contact.html"
                   >צור קשר</a
                 >
@@ -1192,86 +1223,44 @@
             </ul>
           </nav>
 
-          <!-- Contact info -->
+          <!-- blog links-->
           <div>
-            <h3 class="mb-3 text-base text-[#bd8604] font-bold">פרטי קשר</h3>
-            <ul class="space-y-2 text-sm text-[#fefefe]/85">
-              <li class="flex items-center gap-2">
-                <!-- email icon -->
-                <svg
-                  class="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
-                  />
-                  <path d="m22 8-10 6L2 8" />
-                </svg>
-                <span class="opacity-80 sr-only">אימייל:</span>
+            <h3 class="mb-3 text-base text-[#bd8604] font-bold">בבלוג שלנו</h3>
+            <ul class="flex flex-col gap-2 text-sm text-[#fefefe]/85">
+              <li>
                 <a
-                  href="mailto:info@rfglobal.co.il"
                   class="hover:text-[#fefefe]"
-                  >rf.global901@gmail.com</a
+                  href="/our-blog/israeli-investors-cincinnati-ohio-real-estate.html"
+                  >המדריך למשקיעים ישראלים</a
                 >
               </li>
-              <li class="flex items-center gap-2">
-                <!-- phone icon -->
-                <svg
-                  class="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.33 1.7.63 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.2a2 2 0 0 1 2.11-.45c.8.3 1.64.51 2.5.63A2 2 0 0 1 22 16.92z"
-                  />
-                </svg>
-                <span class="opacity-80 sr-only">טלפון:</span>
-                <a href="tel:+972546141198" class="hover:text-[#fefefe]"
-                  >054-6141198</a
+              <li>
+                <a
+                  class="hover:text-[#fefefe]"
+                  href="/our-blog/israeli-investors-cincinnati-ohio-real-estate.html"
+                  >בניית הכנסה פסיבית בנדל״ן</a
                 >
               </li>
-              <li class="flex items-center gap-2">
-                <!-- 2nd phone icon -->
-                <svg
-                  class="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.33 1.7.63 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.2a2 2 0 0 1 2.11-.45c.8.3 1.64.51 2.5.63A2 2 0 0 1 22 16.92z"
-                  />
-                </svg>
-                <span class="opacity-80 sr-only">טלפון:</span>
-                <a href="tel:+97202504457" class="hover:text-[#fefefe]"
-                  >050-2504457</a
+              <li>
+                <a
+                  class="hover:text-[#fefefe]"
+                  href="/our-blog/beginners-mistakes-real-estate.html"
+                  >הטעויות הנפוצות למשקיע המתחיל</a
                 >
               </li>
-              <li class="flex items-center gap-2">
-                <!-- location icon -->
-                <svg
-                  class="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  aria-hidden="true"
+              <li>
+                <a
+                  class="hover:text-[#fefefe]"
+                  href="/our-blog/us-real-estate-market-analysis-2025.html"
+                  >ניתוח שוק הנדל״ן בארה״ב 2025</a
                 >
-                  <path
-                    d="M12 21s-7-4.35-7-10a7 7 0 1 1 14 0c0 5.65-7 10-7 10Z"
-                  />
-                  <circle cx="12" cy="11" r="3" />
-                </svg>
-                <span>Julis, Israel 2498000</span>
+              </li>
+              <li>
+                <a
+                  class="hover:text-[#fefefe]"
+                  href="/our-blog/tax-guide-israeli-investors-us-real-estate.html"
+                  >מדריך מיסוי למשקיעים ישראלים בנדל״ן בארה״ב</a
+                >
               </li>
             </ul>
           </div>
@@ -1322,10 +1311,10 @@
           <div
             class="order-2 flex items-center justify-center gap-6 w-full sm:w-auto"
           >
-            <a class="hover:text-[#fefefe]" href="/privacy-policy"
+            <a class="hover:text-[#fefefe]" href="./privacy.html"
               >מדיניות פרטיות</a
             >
-            <a class="hover:text-[#fefefe]" href="/terms-of-use">תנאי שימוש</a>
+            <a class="hover:text-[#fefefe]" href="./terms.html">תנאי שימוש</a>
           </div>
           <div class="order-1 sm:order-3 w-full sm:w-auto">
             Designed & Developed by

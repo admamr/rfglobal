@@ -336,3 +336,33 @@ document.addEventListener("DOMContentLoaded", () => {
   setActive(initialBtn);
   applyFilter(initialBtn.getAttribute("data-filter"));
 });
+
+// Privacy Policy === Scroll-Spy for Table of Contents ===
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("aside nav a");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const link = document.querySelector(`aside nav a[href="#${id}"]`);
+      if (entry.isIntersecting) {
+        navLinks.forEach((a) =>
+          a.classList.remove("text-primary", "font-bold")
+        );
+        link.classList.add("text-primary", "font-bold");
+      }
+    });
+  },
+  {
+    threshold: 0.45,
+    rootMargin: "-10% 0px -55% 0px", // triggers a bit before midpoint
+  }
+);
+
+sections.forEach((section) => observer.observe(section));
+
+// Blog Page Script--year
+document.getElementById("yearRF").textContent = new Date().getFullYear();
+
+document.getElementById("year").textContent = new Date().getFullYear();
