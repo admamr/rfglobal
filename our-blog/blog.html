@@ -136,7 +136,7 @@
       }
     </style>
   </head>
-  <body class="bg-background text-[#fefefe] font-body">
+  <body class="bg-[#1a1a1a] text-[#fefefe] font-body">
     <!-- HEADER  -->
     <header dir="rtl" class="absolute inset-x-0 top-2 z-50 px-4">
       <div class="mx-auto max-w-4xl">
@@ -289,10 +289,11 @@
                 rgba(11, 15, 25, 0.65) 0%,
                 rgba(11, 15, 25, 0.85) 100%
               ),
-              url('./assets/blog-hero.jpg');
+              url('./blog-assets/blog-hero.png');
             background-size: cover;
             background-position: center;
           "
+          loading="lazy"
         ></div>
         <div class="relative z-10 px-6 sm:px-10 py-16 sm:py-24 text-center">
           <h1
@@ -310,7 +311,7 @@
       <section class="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <!-- Sidebar -->
         <aside class="space-y-8">
-          <div class="rounded-xl border border-white/10 bg-surface p-6">
+          <div class="rounded-xl border border-white/10 bg-[#1a1a1a] p-6">
             <h3 class="mb-4 font-display text-xl font-bold">קטגוריות</h3>
             <ul class="space-y-3 text-white/80">
               <li>
@@ -327,7 +328,7 @@
               </li>
               <li>
                 <a
-                  href="#tip"
+                  href="#"
                   aria-label="גלילה למטה"
                   class="group flex items-center gap-3 hover:text-primary transition"
                 >
@@ -370,13 +371,14 @@
           <!-- Featured -->
           <article
             id="tips"
-            class="group relative overflow-hidden rounded-xl border border-white/10 bg-surface hover:border-primary/50 transition-colors"
+            class="group relative overflow-hidden rounded-xl border border-white/10 bg-[#1a1a1a] hover:border-primary/50 transition-colors"
           >
             <div class="relative h-64 sm:h-80">
               <img
                 src="./blog-assets/blog1.png"
                 alt="שכונה בסינסינטי אוהיו"
                 class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/0"
@@ -419,12 +421,13 @@
 
             <!-- Card 1-->
             <article
-              class="overflow-hidden rounded-xl border border-white/10 bg-surface hover:border-primary/50 transition-colors"
+              class="overflow-hidden rounded-xl border border-white/10 bg-[#1a1a1a] hover:border-primary/50 transition-colors"
             >
               <img
                 src="./blog-assets/blog2.png"
                 alt=""
                 class="h-48 w-full object-cover"
+                loading="lazy"
               />
               <div class="p-6">
                 <div class="flex items-center gap-2 text-xs">
@@ -455,12 +458,13 @@
 
             <!-- Card 2-->
             <article
-              class="overflow-hidden rounded-xl border border-white/10 bg-surface hover:border-primary/50 transition-colors"
+              class="overflow-hidden rounded-xl border border-white/10 bg-[#1a1a1a] hover:border-primary/50 transition-colors"
             >
               <img
                 src="./blog-assets/blog3.png"
                 alt=""
                 class="h-48 w-full object-cover"
+                loading="lazy"
               />
               <div class="p-6">
                 <div class="flex items-center gap-2 text-xs">
@@ -490,12 +494,13 @@
 
             <!-- Card 3-->
             <article
-              class="overflow-hidden rounded-xl border border-white/10 bg-surface hover:border-primary/50 transition-colors"
+              class="overflow-hidden rounded-xl border border-white/10 bg-[#1a1a1a] hover:border-primary/50 transition-colors"
             >
               <img
                 src="./blog-assets/blog4.png"
                 alt=""
                 class="h-48 w-full object-cover"
+                loading="lazy"
               />
               <div class="p-6">
                 <div class="flex items-center gap-2 text-xs">
@@ -524,12 +529,13 @@
 
             <!-- Card 4-->
             <article
-              class="overflow-hidden rounded-xl border border-white/10 bg-surface hover:border-primary/50 transition-colors"
+              class="overflow-hidden rounded-xl border border-white/10 bg-[#1a1a1a] hover:border-primary/50 transition-colors"
             >
               <img
                 src="./blog-assets/blog5.avif"
                 alt=""
                 class="h-48 w-full object-cover"
+                loading="lazy"
               />
               <div class="p-6">
                 <div class="flex items-center gap-2 text-xs">
@@ -574,6 +580,7 @@
               background-size: cover;
               background-position: center;
             "
+            loading="lazy"
           ></div>
           <div class="relative z-10 p-8 sm:p-12 text-center">
             <h3 class="text-2xl sm:text-3xl font-black tracking-tight">
