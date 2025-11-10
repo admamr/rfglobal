@@ -12,14 +12,33 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            colors: { primary: "#bd8604", brand: "#012b1a" },
-            fontFamily: { display: ["Heebo", "ui-sans-serif", "system-ui"] },
-            boxShadow: { card: "0 12px 40px rgba(0,0,0,.25)" },
+            colors: {
+              primary: "#bd8604",
+              background: {
+                dark: "#0B0F19",
+                light: "#F5F7FB",
+              },
+            },
+            fontFamily: {
+              display: ["Heebo", "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              gold: "0 8px 30px rgba(212,175,55,0.18)",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: 0, transform: "translateY(16px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              fadeUp: "fadeUp 700ms ease both",
+            },
           },
         },
       };
@@ -36,7 +55,7 @@
     </style>
   </head>
 
-  <body class="bg-[#0B0F19] text-[#fefefe] font-display">
+  <body class="bg-background-dark text-[#fefefe] font-display">
     <!-- HEADER  -->
     <header dir="rtl" class="absolute inset-x-0 top-2 z-50 px-4">
       <div class="mx-auto max-w-4xl">
@@ -316,7 +335,7 @@
 
             <button
               type="submit"
-              class="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-brand hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+              class="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-brand hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50 hover:text-[#012b1a]"
             >
               שליחת פנייה
             </button>
