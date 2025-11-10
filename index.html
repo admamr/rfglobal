@@ -1039,62 +1039,42 @@
 
       <!-- Newsletter -->
       <section id="contact" class="w-full py-16 bg-[#121212] sm:py-20">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <div class="relative isolate">
+        <div
+          class="relative overflow-hidden rounded-[28px] border border-white/10 bg-cover bg-center"
+          style="
+            background-image: linear-gradient(
+                rgba(11, 15, 25, 0.6),
+                rgba(11, 15, 25, 0.6)
+              ),
+              url('./assets/houses.avif');
+          "
+        >
+          <!-- Gold glow -->
+          <div
+            class="absolute inset-0 -z-10 grid place-items-center opacity-25"
+          >
             <div
-              class="rounded-full border border-white/10 overflow-hidden shadow-gold"
+              class="h-[260px] w-[90%] max-w-4xl rounded-[999px] bg-gradient-to-r from-[#8e6603] via-[#bd8604] to-[#8e6603] blur-3xl"
+            ></div>
+          </div>
+
+          <!-- content -->
+          <div class="relative px-6 sm:px-10 py-12 sm:py-16 text-center">
+            <h3 class="text-3xl sm:text-3xl font-bold text-[#fefefe]">
+              מוכנים להתחיל להשקיע?
+            </h3>
+            <p
+              class="mt-2 text-white/100 max-w-3xl mx-auto text-lg sm:text-base"
             >
-              <div
-                class="relative w-full min-h-[260px] flex items-center justify-center bg-cover bg-center text-center"
-                style="background-image: url('./assets/house1jpg.jpg')"
-                role="img"
-                aria-label="רקע אווירה יוקרתית להשקעות נדל"
-              >
-                <div class="absolute inset-0 bg-background-dark/70"></div>
-                <div
-                  class="relative z-10 flex flex-col items-center justify-center gap-6 px-6 sm:px-10 py-12 max-w-3xl"
-                >
-                  <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
-                      הצטרפו ל-Newsletter שלנו
-                    </h2>
-                    <p class="mt-2 text-sm sm:text-base text-white/80">
-                      קבלו עדכונים על עסקאות חדשות בסינסינטי, ניתוחי שוק וטיפים
-                      להשקעה — ישירות למייל.
-                    </p>
-                  </div>
-                  <form
-                    class="w-full max-w-md"
-                    aria-label="הרשמה לניוזלטר"
-                    onsubmit="event.preventDefault()"
-                  >
-                    <div
-                      class="flex items-stretch gap-2 rounded-full bg-white/10 p-1.5 border border-white/20 backdrop-blur"
-                    >
-                      <label for="nl_email" class="sr-only">אימייל</label>
-                      <input
-                        id="nl_email"
-                        name="email"
-                        type="email"
-                        required
-                        autocomplete="email"
-                        class="flex-1 rounded-full bg-transparent px-4 py-3 text-sm placeholder-white/60 focus:outline-none"
-                        placeholder="האימייל שלך"
-                      />
-                      <button
-                        type="submit"
-                        class="shrink-0 rounded-full bg-[#bd8604] px-5 py-3 text-sm font-semibold text-background-dark hover:brightness-110"
-                      >
-                        הרשמה
-                      </button>
-                    </div>
-                    <p class="mt-2 text-xs text-white/60">
-                      נשלח רק תוכן רלוונטי. ניתן להסיר בכל עת.
-                    </p>
-                  </form>
-                </div>
-              </div>
-            </div>
+              גלו את הזדמנויות ההשקעה שלנו ובנו יחד איתנו את האסטרטגיה שתעזור
+              לכם לצמוח בביטחון.
+            </p>
+            <a
+              href="./contact.html"
+              class="mt-6 inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-6 py-3 text-sm font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+            >
+              קבעו פגישת ייעוץ
+            </a>
           </div>
         </div>
       </section>
