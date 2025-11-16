@@ -366,3 +366,91 @@ sections.forEach((section) => observer.observe(section));
 document.getElementById("yearRF").textContent = new Date().getFullYear();
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+//EmailJS Contact Form integration
+document.addEventListener("DOMContentLoaded", function () {
+  let contactForm =
+    document.getElementById("contact-form") ||
+    document.querySelector('form[action=""]') ||
+    document.querySelector("form");
+
+  // If no form exists on this page, stop.
+  if (!contactForm) return;
+
+  // Attach submit handler
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const templateParams = Object.fromEntries(formData.entries());
+
+    try {
+      const result = await emailjs.send(
+        //IDs from EmailJS dashboard
+        "service_j2l5cxc",
+        "template_owwselb",
+        templateParams
+      );
+
+      console.log("SUCCESS:", result.text);
+      alert("הטופס נשלח בהצלחה. נחזור אליכם בהקדם!");
+      contactForm.reset();
+    } catch (error) {
+      console.error("FAILED:", error);
+      alert("תקלה בשליחה — נסו שוב או פנו אלינו במייל.");
+    }
+  });
+});
+
+//EmailJS Newsletter signup
+document.addEventListener("DOMContentLoaded", function () {
+  const SERVICE_ID = "service_j2l5cxc";
+  const TEMPLATE_NEWS = "template_vhhgiw9";
+
+  function handleNewsletterForm(form, sourceLabel) {
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const emailInput = form.querySelector('input[type="email"]');
+      if (!emailInput) return;
+
+      const email = emailInput.value.trim();
+      if (!email) {
+        alert("נא להזין כתובת אימייל.");
+        return;
+      }
+
+      const params = {
+        email: email,
+        source: sourceLabel,
+        page_url: window.location.href,
+        submitted_at: new Date().toLocaleString("he-IL"),
+      };
+
+      emailjs
+        .send(SERVICE_ID, TEMPLATE_NEWS, params)
+        .then(function () {
+          alert("נרשמת בהצלחה לניוזלטר! 📩");
+          form.reset();
+        })
+        .catch(function (error) {
+          console.error("EmailJS error:", error);
+          alert("הייתה תקלה בהרשמה. נסה שוב מאוחר יותר.");
+        });
+    });
+  }
+
+  // Blog CTA newsletter
+  const blogNewsletterForm = document
+    .querySelector("form #blog_nl")
+    ?.closest("form");
+  handleNewsletterForm(blogNewsletterForm, "CTA Section");
+
+  // Footer newsletter
+  const footerNewsletterForm = document
+    .querySelector("form #nl_footer")
+    ?.closest("form");
+  handleNewsletterForm(footerNewsletterForm, "Footer");
+});

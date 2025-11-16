@@ -9,6 +9,21 @@
       rel="icon"
       type="image/x-icon"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- SEO -->
     <meta
@@ -114,6 +129,11 @@
     <style>
       body {
         background: #0b0f19;
+      }
+      .chicle-regular {
+        font-family: "Chicle", serif;
+        font-weight: 400;
+        font-style: normal;
       }
     </style>
   </head>
@@ -673,17 +693,26 @@
           <div class="order-1 sm:order-3 w-full sm:w-auto">
             Designed & Developed by
             <a
-              href="https://flammin.studio"
-              class="underline decoration-[#bd8604]/60 hover:text-[#fefefe]"
+              href="https://www.instagram.com/flammin.studio/"
+              class="chicle-regular text-[18px] text-[#ECD5BC] hover:text-[#4E3636]"
               target="_blank"
               rel="noopener"
-              >Flammin.Studio</a
+              >Flammin<span
+                class="chicle-regular text-[20px] text-[#CD1818] font-bold"
+                >.</span
+              >Studio</a
             >
           </div>
         </div>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("g6avWLMCkf8684pQ0");
+      })();
+    </script>
+    <script src="/assets/js/email.js"></script>
     <script src="/main.js"></script>
   </body>
 </html>
