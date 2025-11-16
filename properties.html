@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>RF-Global — אודות</title>
+    <title>RF-Global — פרויקטים</title>
     <link
       href="/assets/RF-Global-Logo-Icon.jpg"
       rel="icon"
@@ -13,18 +13,18 @@
     <!-- SEO -->
     <meta
       name="description"
-      content="הכירו את RF-Global: שני מייסדים עם ניסיון עשיר בנדל״ן בארה״ב, חזון משותף להשקעות חכמות בסינסינטי, ושקיפות מלאה מול המשקיעים."
+      content="הכירו את הפרויקטים של RF-Global: איתור, השבחה והשכרה של נכסי נדל״ן בסינסינטי, אוהיו. תיק פרויקטים אמיתי למשקיעים ישראלים."
     />
-    <link rel="canonical" href="https://rfglobal.co.il/about/" />
+    <link rel="canonical" href="https://rfglobal.co.il/properties/" />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="RF-Global — אודות" />
+    <meta property="og:title" content="RF-Global — פרויקטים" />
     <meta
       property="og:description"
-      content="הסיפור, החזון והערכים של RF-Global – השקעות נדל״ן בסינסינטי עם ליווי צמוד ושקיפות מלאה."
+      content="פרויקטי נדל״ן בסינסינטי, אוהיו — שווי רכישה, שיפוץ, תשואה ומיקום לכל נכס."
     />
     <meta property="og:image" content="/og-image.jpg" />
-    <meta property="og:url" content="https://rfglobal.co.il/about/" />
+    <meta property="og:url" content="https://rfglobal.co.il/properties/" />
     <meta name="theme-color" content="#0B0F19" />
 
     <!-- 🔎 Google Search Console (replace with your real code) -->
@@ -86,10 +86,6 @@
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
     <style>
       html {
         scroll-behavior: smooth;
@@ -102,6 +98,72 @@
         html {
           scroll-behavior: auto;
         }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-bg,
+        [data-parallax],
+        .animate-fade-up,
+        .scroll-cue {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
+      /* Fade-up + slight blur, staggered via --delay */
+      @keyframes kf-fade-up {
+        0% {
+          opacity: 0;
+          transform: translateY(14px);
+          filter: blur(4px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+      .animate-fade-up {
+        opacity: 0;
+        animation: kf-fade-up 700ms ease both;
+        animation-delay: var(--delay, 0ms);
+      }
+
+      /* Scroll cue pulse */
+      @keyframes kf-cue {
+        0%,
+        100% {
+          transform: translate(-50%, 0);
+          opacity: 0.85;
+        }
+        50% {
+          transform: translate(-50%, -6px);
+          opacity: 1;
+        }
+      }
+      .scroll-cue {
+        animation: kf-cue 1.8s ease-in-out infinite;
+      }
+
+      /* Parallax will apply transform; ensure GPU hint */
+      .hero-bg {
+        transform: translateZ(0);
+      }
+      @media (min-width: 1024px) {
+        .map-wrap {
+          aspect-ratio: 16 / 9;
+        }
+      }
+      .map-frame {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        filter: hue-rotate(25deg) saturate(115%) brightness(1.05);
+        transition: filter 0.3s ease;
+      }
+      .group:hover .map-frame {
+        filter: hue-rotate(0deg) saturate(140%) brightness(1.2);
       }
     </style>
   </head>
@@ -243,200 +305,599 @@
       </div>
     </header>
 
-    <!-- ======= MAIN ======= -->
     <main class="mx-auto max-w-6xl px-4 sm:px-6 pt-28 pb-16">
-      <!-- Hero -->
-      <section
-        class="relative overflow-hidden rounded-[25px] border border-white/10 bg-[url('/assets/neighborhood.avif')] bg-cover bg-center"
-      >
-        <div class="bg-[#1A1A1D]/70">
-          <div class="px-6 sm:px-10 py-14 sm:py-20 text-center">
-            <h1
-              class="text-3xl sm:text-5xl font-black tracking-tight text-[#bd8604]"
-            >
-              שני מייסדים, חזון אחד – להשקיע חכם בסינסינטי
-            </h1>
-            <p
-              class="mt-3 sm:mt-4 max-w-3xl mx-auto text-lg font-semibold sm:text-lg text-white"
-            >
-              RF-Global נולדה מתוך מחויבות לייצר הזדמנויות נדל״ן איכותיות,
-              בשקיפות מלאה וליווי צמוד עד תשואה.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Founders -->
-      <section class="mt-12 sm:mt-16">
-        <h2 class="text-center text-2xl sm:text-3xl font-bold">
-          הכירו את המייסדים
-        </h2>
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Razi -->
-          <article
-            class="rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-card p-6"
-          >
-            <div class="flex flex-col items-center text-center gap-4">
-              <div
-                class="h-32 w-32 rounded-full border-2 border-primary bg-cover bg-center"
-                style="background-image: url('/assets/Razi.png')"
-                aria-hidden="true"
-              ></div>
-              <div>
-                <h3 class="text-xl font-bold">רזי</h3>
-                <p class="text-primary font-medium">
-                  מייסד וסמנכ״ל השקעות ראשי
-                </p>
-              </div>
-              <p class="text-white/80 text-sm sm:text-base max-w-prose">
-                ניסיון רב בתחום הרכישה, ניהול והשבחת נכסים—מוביל את אסטרטגיית
-                ההשקעות והצמיחה של RF-Global.
-              </p>
-            </div>
-          </article>
-
-          <!-- Fadi -->
-          <article
-            class="rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-card p-6"
-          >
-            <div class="flex flex-col items-center text-center gap-4">
-              <div
-                class="h-32 w-32 rounded-full border-2 border-primary bg-cover bg-center"
-                style="background-image: url('/assets/Fadi.png')"
-                aria-hidden="true"
-              ></div>
-              <div>
-                <h3 class="text-xl font-bold">פאדי</h3>
-                <p class="text-primary font-medium">מייסד ומנהל תפעול</p>
-              </div>
-              <p class="text-white/80 text-sm sm:text-base max-w-prose">
-                מומחה בניתוח שווקים ותפעול—דואג לכל פרט: בדיקות נאותות, ניהול,
-                ודיווח שקוף למשקיעים.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Story -->
-      <section class="mt-12 sm:mt-16 text-center">
-        <h2 class="text-2xl sm:text-3xl font-bold">הסיפור שלנו</h2>
-        <p class="mt-3 max-w-3xl mx-auto text-white/80 text-sm sm:text-lg">
-          זיהינו את הפוטנציאל שבשוק סינסינטי והקמנו פלטפורמה שמחברת משקיעים
-          להזדמנויות מניבות. השילוב בין אנליזה מעמיקה, ניהול מוקפד ושקיפות
-          מלאה—הוא זה שמייצר תוצאות יציבות לאורך זמן.
+      <!-- Page intro -->
+      <header class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl font-black text-primary">
+          הפרויקטים שלנו
+        </h1>
+        <p class="mt-3 text-m sm:text-base text-white/80">
+          ב-RF-Global, אנו גאים להציג בפניכם תיק עבודות מרשים המעיד על מומחיותנו
+          באיתור והשבחת נכסי נדל"ן ייחודיים. כל פרויקט נבחר בקפידה ומנוהל
+          במקצועיות חסרת פשרות, במטרה לייצר ערך מקסימלי עבור המשקיעים שלנו. גלו
+          את הפרויקטים שלנו וצפו בהצלחות שהשגנו.
         </p>
-      </section>
+      </header>
 
-      <!-- Mission & Vision -->
-      <section class="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="rounded-2xl border border-white/10 bg-white/[0.06] p-6">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-primary text-3xl"
-              >rocket_launch</span
-            >
-            <h3 class="text-xl font-bold">המשימה שלנו</h3>
-          </div>
-          <p class="mt-2 text-white/80 text-sm sm:text-base">
-            להעצים משקיעים באמצעות השקעות נדל״ן איכותיות, שירות אישי ושקוף,
-            והובלה מקצועית משלב היעד ועד התשואה.
-          </p>
+      <!-- Filters -->
+      <div dir="rtl" class="mt-14 sm:mt-16 mb-6 sm:mb-8">
+        <div
+          id="propFilters"
+          aria-controls="projectsGrid"
+          class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 p-1"
+        >
+          <button
+            type="button"
+            data-filter="all"
+            class="prop-filter active inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-[#fefefe]/90 hover:text-[#fefefe] focus:outline-none focus:ring-2 focus:ring-white/30"
+            aria-pressed="true"
+          >
+            הכל
+          </button>
+          <button
+            type="button"
+            data-filter="rented"
+            class="prop-filter inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-[#fefefe]/80 hover:text-[#fefefe] focus:outline-none focus:ring-2 focus:ring-white/30"
+            aria-pressed="false"
+          >
+            מושכר
+          </button>
+          <button
+            type="button"
+            data-filter="sold"
+            class="prop-filter inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-[#fefefe]/80 hover:text-[#fefefe] focus:outline-none focus:ring-2 focus:ring-white/30"
+            aria-pressed="false"
+          >
+            נמכר
+          </button>
         </div>
-        <div class="rounded-2xl border border-white/10 bg-white/[0.06] p-6">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-primary text-3xl"
-              >visibility</span
-            >
-            <h3 class="text-xl font-bold">החזון שלנו</h3>
-          </div>
-          <p class="mt-2 text-white/80 text-sm sm:text-base">
-            להיות הכתובת האמינה ביותר למשקיעים ישראלים באוהיו—עם צמיחה בת-קיימא
-            והשפעה קהילתית חיובית.
-          </p>
-        </div>
-      </section>
+      </div>
 
-      <!-- Values -->
-      <section class="mt-12 sm:mt-16">
-        <h2 class="text-center text-2xl sm:text-3xl font-bold">הערכים שלנו</h2>
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Cards grid -->
+      <section id="projectsGrid" class="mt-10 grid grid-cols-1 gap-10">
+        <!-- CARD 1 — BR1 -->
+        <article
+          data-status="sold"
+          class="project-card rounded-[22px] border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,.22)] overflow-hidden"
+        >
           <div
-            class="rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-center"
+            class="grid grid-cols-1 sm:grid-cols-[1.1fr_.9fr] gap-5 p-5 sm:p-6"
           >
-            <span class="material-symbols-outlined text-primary text-4xl"
-              >verified_user</span
-            >
-            <h3 class="mt-2 text-lg font-bold">אמון</h3>
-            <p class="text-white/80 text-sm">
-              שקיפות מלאה וקשר רציף עם המשקיעים בכל שלב.
-            </p>
+            <div class="rounded-xl overflow-hidden bg-black/20 min-h-[200px]">
+              <div class="relative">
+                <img
+                  src="/assets/apt1.jpg"
+                  alt="בית משופץ בסינסינטי"
+                  class="h-80 w-full object-cover"
+                  loading="lazy"
+                />
+                <!-- status badge -->
+                <span
+                  class="absolute top-2 left-2 rounded-full bg-emerald-600/85 px-2 py-1 text-[11px] font-bold"
+                >
+                  נמכר
+                </span>
+              </div>
+            </div>
+            <div class="text-right">
+              <h2
+                class="text-xl sm:text-2xl text-[#bd8604] font-extrabold mb-3"
+              >
+                Cincinnati — BR1
+              </h2>
+              <dl class="space-y-1.5 text-[15px]">
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי רכישה:
+                  </dt>
+                  <dd class="font-semibold text-[#bd8604]">$55,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    ערך שיפוץ:
+                  </dt>
+                  <dd class="font-semibold">$80,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי מכירה:
+                  </dt>
+                  <dd class="font-semibold">$170,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    תשואה:
+                  </dt>
+                  <dd class="font-bold">25%</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    מיקום:
+                  </dt>
+                  <dd class="font-bold">
+                    1021 Beech Ave, Cincinnati, OH 45205, USA
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
+          <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+            <div
+              class="rounded-[18px] overflow-hidden border border-white/10 bg-black/20"
+            >
+              <iframe
+                class="w-full h-[260px] md:h-[300px]"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.8107611161086!2d-84.58039782330806!3d39.11077833408438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b67630c9f199%3A0xadecd99b0c70ba9b!2s1021%20Beech%20Ave%2C%20Cincinnati%2C%20OH%2045205%2C%20USA!5e0!3m2!1sen!2sil!4v1748096227665"
+              >
+              </iframe>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2 — APT2 -->
+        <article
+          data-status="sold"
+          class="project-card rounded-[22px] border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,.22)] overflow-hidden"
+        >
           <div
-            class="rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-center"
+            class="grid grid-cols-1 sm:grid-cols-[1.1fr_.9fr] gap-5 p-5 sm:p-6"
           >
-            <span class="material-symbols-outlined text-primary text-4xl"
-              >diamond</span
-            >
-            <h3 class="mt-2 text-lg font-bold">יושרה</h3>
-            <p class="text-white/80 text-sm">
-              סטנדרטים אתיים מחמירים—הבסיס לכל החלטה.
-            </p>
+            <div class="rounded-xl overflow-hidden bg-black/20 min-h-[200px]">
+              <div class="relative">
+                <img
+                  src="/assets/apt2.jpg"
+                  alt="נכס נוסף בסינסינטי"
+                  class="h-80 w-full object-cover"
+                  loading="lazy"
+                />
+                <!-- status badge -->
+                <span
+                  class="absolute top-2 left-2 rounded-full bg-emerald-600/85 px-2 py-1 text-[11px] font-bold"
+                >
+                  נמכר
+                </span>
+              </div>
+            </div>
+            <div class="text-right">
+              <h2
+                class="text-xl sm:text-2xl text-[#bd8604] font-extrabold mb-3"
+              >
+                Cincinnati — APT2
+              </h2>
+              <dl class="space-y-1.5 text-[15px]">
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי רכישה:
+                  </dt>
+                  <dd class="font-semibold text-[#bd8604]">$55,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    ערך שיפוץ:
+                  </dt>
+                  <dd class="font-semibold">$120,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי מכירה:
+                  </dt>
+                  <dd class="font-semibold">$230,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    תשואה:
+                  </dt>
+                  <dd class="font-bold">30%</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    מיקום:
+                  </dt>
+                  <dd class="font-bold">
+                    6410 Savannah Ave, Cincinnati, OH 45239, USA
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
+          <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+            <div
+              class="rounded-[18px] overflow-hidden border border-white/10 bg-black/20"
+            >
+              <iframe
+                class="w-full h-[260px] md:h-[300px]"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.455860157173!2d-84.55609692330485!3d39.209811328208886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88404b3cb29d6651%3A0x97bd194609d5b606!2s6410%20Savannah%20Ave%2C%20North%20College%20Hill%2C%20OH%2045239%2C%20USA!5e0!3m2!1sen!2sil!4v1748096402105"
+              >
+              </iframe>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3 — SFH3 -->
+        <article
+          data-status="sold"
+          class="project-card rounded-[22px] border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,.22)] overflow-hidden"
+        >
           <div
-            class="rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-center"
+            class="grid grid-cols-1 sm:grid-cols-[1.1fr_.9fr] gap-5 p-5 sm:p-6"
           >
-            <span class="material-symbols-outlined text-primary text-4xl"
-              >trending_up</span
-            >
-            <h3 class="mt-2 text-lg font-bold">צמיחה</h3>
-            <p class="text-white/80 text-sm">
-              איתור הזדמנויות מתמשך ושיפור מתמיד בביצועים.
-            </p>
+            <div class="rounded-xl overflow-hidden bg-black/20 min-h-[200px]">
+              <div class="relative">
+                <img
+                  src="/assets/apt3.jpeg"
+                  alt="בית משופץ נוסף"
+                  class="h-80 w-full object-cover"
+                  loading="lazy"
+                />
+                <!-- status badge -->
+                <span
+                  class="absolute top-2 left-2 rounded-full bg-emerald-600/85 px-2 py-1 text-[11px] font-bold"
+                >
+                  נמכר
+                </span>
+              </div>
+            </div>
+            <div class="text-right">
+              <h2
+                class="text-xl sm:text-2xl text-[#bd8604] font-extrabold mb-3"
+              >
+                Cincinnati — SFH3
+              </h2>
+              <dl class="space-y-1.5 text-[15px]">
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי רכישה:
+                  </dt>
+                  <dd class="font-semibold text-[#bd8604]">$98,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    ערך שיפוץ:
+                  </dt>
+                  <dd class="font-semibold">$130,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי מכירה:
+                  </dt>
+                  <dd class="font-semibold">$312,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    תשואה:
+                  </dt>
+                  <dd class="font-bold">37%</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    מיקום:
+                  </dt>
+                  <dd class="font-bold">
+                    6617 Sampson Ln, Cincinnati, OH 45236, USA
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
-        </div>
+          <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+            <div
+              class="rounded-[18px] overflow-hidden border border-white/10 bg-black/20"
+            >
+              <iframe
+                class="w-full h-[260px] md:h-[300px]"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.425988283942!2d-84.40270742330559!3d39.18776822951761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884052d4eade19c1%3A0x569eb6c5c16d3771!2s6617%20Sampson%20Ln%2C%20Cincinnati%2C%20OH%2045236%2C%20USA!5e0!3m2!1sen!2sil!4v1748096425239"
+              >
+              </iframe>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article
+          data-status="rented"
+          class="project-card rounded-[22px] border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,.22)] overflow-hidden"
+        >
+          <div
+            class="grid grid-cols-1 sm:grid-cols-[1.1fr_.9fr] gap-5 p-5 sm:p-6"
+          >
+            <div class="rounded-xl overflow-hidden bg-black/20 min-h-[200px]">
+              <div class="relative">
+                <img
+                  src="/assets/property4.jpeg"
+                  alt="Cincinnati house on Dale rd"
+                  class="h-80 w-full object-cover"
+                  loading="lazy"
+                />
+                <!-- status badge -->
+                <span
+                  class="absolute top-2 left-2 rounded-full bg-[#bd8604] px-2 py-1 text-[11px] font-bold"
+                >
+                  מושכר
+                </span>
+              </div>
+            </div>
+            <div class="text-right">
+              <h2
+                class="text-xl sm:text-2xl text-[#bd8604] font-extrabold mb-3"
+              >
+                Cincinnati — SFH4
+              </h2>
+              <dl class="space-y-1.5 text-[15px]">
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי מכירה:
+                  </dt>
+                  <dd class="font-semibold text-[#bd8604]">$125,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    ערך שיפוץ:
+                  </dt>
+                  <dd class="font-semibold">₪40,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שכירות:
+                  </dt>
+                  <dd class="font-bold">$1,500</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    תשואה:
+                  </dt>
+                  <dd class="font-bold">11%</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    מיקום:
+                  </dt>
+                  <dd class="font-bold">45212 CINCINNATI, DALE RD 2011</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+            <div
+              class="rounded-[18px] overflow-hidden border border-white/10 bg-black/20"
+            >
+              <iframe
+                class="w-full h-[260px] md:h-[300px]"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.9175297512224!2d-84.46087142234279!3d39.17659553017952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b2b8644670e1%3A0x6f3fca30c992ae16!2s2011%20Dale%20Rd%2C%20Cincinnati%2C%20OH%2045212%2C%20USA!5e0!3m2!1sen!2sil!4v1762537808525!5m2!1sen!2sil"
+              >
+              </iframe>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 5 -->
+        <article
+          data-status="rented"
+          class="project-card rounded-[22px] border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,.22)] overflow-hidden"
+        >
+          <div
+            class="grid grid-cols-1 sm:grid-cols-[1.1fr_.9fr] gap-5 p-5 sm:p-6"
+          >
+            <div class="rounded-xl overflow-hidden bg-black/20 min-h-[200px]">
+              <div class="relative">
+                <img
+                  src="/assets/property5.jpeg"
+                  alt="Cincinnati apt on Galbraith rd"
+                  class="h-80 w-full object-cover"
+                  loading="lazy"
+                />
+                <!-- status badge -->
+                <span
+                  class="absolute top-2 left-2 rounded-full bg-[#bd8604] px-2 py-1 text-[11px] font-bold"
+                >
+                  מושכר
+                </span>
+              </div>
+            </div>
+            <div class="text-right">
+              <h2
+                class="text-xl sm:text-2xl text-[#bd8604] font-extrabold mb-3"
+              >
+                Cincinnati-APT5
+              </h2>
+              <dl class="space-y-1.5 text-[15px]">
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי מכירה:
+                  </dt>
+                  <dd class="font-semibold text-[#bd8604]">$148,500</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    ערך שיפוץ:
+                  </dt>
+                  <dd class="font-semibold">$20,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שכירות:
+                  </dt>
+                  <dd class="font-bold">$1,500</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    תשואה:
+                  </dt>
+                  <dd class="font-bold">10.5%</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    מיקום:
+                  </dt>
+                  <dd class="font-bold">
+                    w galbraith rd, cincinnati, oh 45231 838
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+            <div
+              class="rounded-[18px] overflow-hidden border border-white/10 bg-black/20"
+            >
+              <iframe
+                class="w-full h-[260px] md:h-[300px]"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.097168679434!2d-84.55393222234203!3d39.217958827723294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884035614599fd1f%3A0xf8ba2d0a637cd79c!2sW%20Galbraith%20Rd%2C%20Ohio%2C%20USA!5e0!3m2!1sen!2sil!4v1762538420662!5m2!1sen!2sil"
+              >
+              </iframe>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 6 -->
+        <article
+          data-status="rented"
+          class="rounded-[22px] border border-white/10 bg-white/[0.06] backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,.22)] overflow-hidden"
+        >
+          <div
+            class="grid grid-cols-1 sm:grid-cols-[1.1fr_.9fr] gap-5 p-5 sm:p-6"
+          >
+            <div class="rounded-xl overflow-hidden bg-black/20 min-h-[200px]">
+              <div class="relative">
+                <img
+                  src="/assets/property6.jpeg"
+                  alt="Modern house on Madeleine Cir"
+                  class="h-80 w-full object-cover"
+                  loading="lazy"
+                />
+                <!-- status badge -->
+                <span
+                  class="absolute top-2 left-2 rounded-full bg-[#bd8604] px-2 py-1 text-[11px] font-bold"
+                >
+                  מושכר
+                </span>
+              </div>
+            </div>
+            <div class="text-right">
+              <h2
+                class="text-xl sm:text-2xl text-[#bd8604] font-extrabold mb-3"
+              >
+                Modern House-Madeleine Cir
+              </h2>
+              <dl class="space-y-1.5 text-[15px]">
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שווי מכירה:
+                  </dt>
+                  <dd class="font-semibold text-[#bd8604]">$169,900</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    ערך שיפוץ:
+                  </dt>
+                  <dd class="font-semibold">$25,000</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    שכירות:
+                  </dt>
+                  <dd class="font-bold">$1,700</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    תשואה:
+                  </dt>
+                  <dd class="font-bold">10.4%</dd>
+                </div>
+                <br />
+                <div class="flex gap-2">
+                  <dt class="text-white font-semibold min-w-[5.2rem]">
+                    מיקום:
+                  </dt>
+                  <dd class="font-bold">
+                    Madeleine Cir 1116, Cincinnati, OH 45231
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+            <div
+              class="rounded-[18px] overflow-hidden border border-white/10 bg-black/20"
+            >
+              <iframe
+                class="w-full h-[260px] md:h-[300px]"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.758961901664!2d-84.52963042234181!3d39.22563972726748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88404b7c843886bd%3A0xd398585ca3091c06!2s1116%20Madeleine%20Cir%2C%20Cincinnati%2C%20OH%2045231%2C%20USA!5e0!3m2!1sen!2sil!4v1762538690199!5m2!1sen!2sil"
+              >
+              </iframe>
+            </div>
+          </div>
+        </article>
       </section>
 
       <!-- CTA -->
-      <section class="mt-14 sm:mt-20">
+      <div class="relative mt-20 sm:mt-50 text-center overflow-hidden">
+        <!-- background image -->
         <div
-          class="relative overflow-hidden rounded-[28px] border border-white/10 bg-cover bg-center"
-          style="
-            background-image: linear-gradient(
-                rgba(11, 15, 25, 0.6),
-                rgba(11, 15, 25, 0.6)
-              ),
-              url('/assets/houses.avif');
-          "
-        >
-          <!-- Gold glow -->
-          <div
-            class="absolute inset-0 -z-10 grid place-items-center opacity-25"
-          >
-            <div
-              class="h-[260px] w-[90%] max-w-4xl rounded-[999px] bg-gradient-to-r from-[#8e6603] via-[#bd8604] to-[#8e6603] blur-3xl"
-            ></div>
-          </div>
+          class="absolute inset-0 mx-auto w-full sm:w-full h-full rounded-[25px] bg-cover bg-center opacity-45 sm:opacity-45"
+          style="background-image: url('/assets/skyscrapers.avif')"
+          aria-hidden="true"
+        ></div>
 
-          <!-- content -->
-          <div class="relative px-6 sm:px-10 py-12 sm:py-16 text-center">
-            <h3 class="text-3xl sm:text-3xl font-bold text-[#fefefe]">
-              מוכנים להתחיל להשקיע?
-            </h3>
-            <p
-              class="mt-2 text-white/100 max-w-3xl mx-auto text-lg sm:text-base"
-            >
-              גלו את הזדמנויות ההשקעה שלנו ובנו יחד איתנו את האסטרטגיה שתעזור
-              לכם לצמוח בביטחון.
-            </p>
-            <a
-              href="/contact/"
-              class="mt-6 inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-6 py-3 text-sm font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
-            >
-              קבעו פגישת ייעוץ
-            </a>
-          </div>
+        <!-- Content -->
+        <div class="relative z-10 py-12 sm:py-16 px-4">
+          <h2 class="text-2xl sm:text-m font-bold text-[#fefefe]">
+            הפרויקט הבא שלכם בנדל״ן האמריקאי מחכה לכם
+          </h2>
+          <p
+            class="mt-2 max-w-2xl mx-auto text-xl font-semibold sm:text-base text-white/100"
+          >
+            עם ניסיון, שקיפות וליווי צמוד, נוביל אתכם להזדמנויות השקעה רווחיות
+            בארה״ב
+          </p>
+          <a
+            href="/contact/"
+            class="mt-6 inline-flex items-center justify-center rounded-2xl bg-[#bd8604] px-8 py-3 text-sm sm:text-base font-semibold text-[#012b1a] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#bd8604]/50"
+          >
+            תאמו פגישת ייעוץ
+          </a>
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -660,6 +1121,7 @@
       </div>
     </footer>
 
+    <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
       (function () {
