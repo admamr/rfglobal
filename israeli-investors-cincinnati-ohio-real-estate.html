@@ -7,20 +7,23 @@
       המדריך למשקיעים ישראלים בסינסינטי, אוהיו: למה השוק הזה בוער ואיך נכנסים
       נכון | RF-Global
     </title>
+
     <link
       href="/assets/RF-Global-Logo-Icon.jpg"
       rel="icon"
       type="image/x-icon"
     />
-    <!-- SEO (unchanged) -->
+
+    <!-- SEO -->
     <meta
       name="description"
       content="למה יותר ויותר משקיעים ישראלים פונים לסינסינטי, אוהיו? מדריך מעשי: שכונות חמות, מספרי תשואה, מסלול רכישה והשבחה, מיסוי, וסיכונים שצריך לדעת לנהל."
     />
     <link
       rel="canonical"
-      href="https://rfglobal.co.il/blog/israeli-investors-cincinnati-ohio-real-estate.html"
+      href="https://rfglobal.co.il/israeli-investors-cincinnati-ohio-real-estate/"
     />
+    <meta property="og:locale" content="he_IL" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="RF-Global" />
     <meta
@@ -33,7 +36,7 @@
     />
     <meta
       property="og:url"
-      content="https://rfglobal.co.il/blog/israeli-investors-cincinnati-ohio-real-estate.html"
+      content="https://rfglobal.co.il/israeli-investors-cincinnati-ohio-real-estate/"
     />
     <meta
       property="og:image"
@@ -52,8 +55,9 @@
       name="twitter:image"
       content="https://rfglobal.co.il/assets/blog/cincinnati-feature.jpg"
     />
+    <meta name="theme-color" content="#0B0F19" />
 
-    <!-- Article Schema (unchanged) -->
+    <!-- Article Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -76,12 +80,28 @@
         "inLanguage": "he-IL",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://rfglobal.co.il/blog/israeli-investors-cincinnati-ohio-real-estate.html"
+          "@id": "https://rfglobal.co.il/israeli-investors-cincinnati-ohio-real-estate/"
         }
       }
     </script>
 
-    <!-- Tailwind (ADD typography plugin) -->
+    <!-- 📊 Google tag (GA4) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EVLN29Q0VB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EVLN29Q0VB", {
+        send_page_view: true,
+      });
+    </script>
+
+    <!-- Tailwind (forms + typography + container-queries) -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
     <script>
       tailwind.config = {
@@ -89,8 +109,12 @@
         theme: {
           extend: {
             colors: {
-              primary: "#D4AF37",
-              background: "#0B0F19",
+              primary: "#bd8604",
+              brand: "#012b1a",
+              background: {
+                dark: "#0B0F19",
+                light: "#F5F7FB",
+              },
               surface: "#161b29",
               textPri: "#F0F0F0",
               textSec: "#A9A9A9",
@@ -105,13 +129,24 @@
         },
       };
     </script>
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Heebo:wght@400;600;700;900&family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <style>
       body {
         background: #0b0f19;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
       }
     </style>
   </head>
@@ -254,7 +289,7 @@
       </div>
     </header>
 
-    <!-- MAIN: add roomy padding-top so the title clears the header -->
+    <!-- MAIN -->
     <main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-20">
       <!-- Title / Subtitle -->
       <header class="mb-8">
@@ -281,7 +316,7 @@
         />
       </figure>
 
-      <!-- ARTICLE: bigger type, longer line-height, comfy spacing & readable width -->
+      <!-- ARTICLE -->
       <article
         class="mt-10 mx-auto max-w-3xl prose prose-invert prose-lg md:prose-xl prose-headings:font-display prose-h2:mt-10 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:leading-8 prose-li:leading-8 prose-ul:my-4 prose-ol:my-4 prose-a:text-primary hover:prose-a:text-primary/90 prose-hr:border-borderD"
       >
@@ -415,7 +450,7 @@
               class="h-16 w-20 flex-shrink-0 rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div class="min-w-0">
-              <p class="text-xs text-textSec mb-1 hover:text[#bd8604]">הבא</p>
+              <p class="text-xs text-textSec mb-1 hover:text-[#bd8604]">הבא</p>
               <p
                 class="font-display text-white font-medium leading-snug line-clamp-2"
               >
@@ -475,7 +510,7 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (same as other pages) -->
     <footer dir="rtl" class="relative bg-[#012b1a] text-[#fefefe]">
       <div
         class="h-[2px] w-full bg-gradient-to-r from-[#8e6603] via-[#bd8604] to-[#8e6603]"
@@ -676,6 +711,7 @@
         </div>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
       (function () {

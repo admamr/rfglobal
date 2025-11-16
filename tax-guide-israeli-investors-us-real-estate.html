@@ -4,25 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>מדריך מיסוי למשקיעים ישראלים בנדל״ן בארה״ב (2025) | RF-Global</title>
+
     <link
       href="/assets/RF-Global-Logo-Icon.jpg"
       rel="icon"
       type="image/x-icon"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chicle&display=swap"
-      rel="stylesheet"
     />
 
     <!-- SEO -->
@@ -32,10 +18,11 @@
     />
     <link
       rel="canonical"
-      href="https://rfglobal.co.il/blog/tax-guide-israeli-investors-us-real-estate.html"
+      href="https://rfglobal.co.il/tax-guide-israeli-investors-us-real-estate/"
     />
 
     <!-- Open Graph -->
+    <meta property="og:locale" content="he_IL" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="RF-Global" />
     <meta
@@ -48,7 +35,7 @@
     />
     <meta
       property="og:url"
-      content="https://rfglobal.co.il/blog/tax-guide-israeli-investors-us-real-estate.html"
+      content="https://rfglobal.co.il/tax-guide-israeli-investors-us-real-estate/"
     />
     <meta
       property="og:image"
@@ -69,6 +56,7 @@
       name="twitter:image"
       content="https://rfglobal.co.il/assets/blog/tax-feature.jpg"
     />
+    <meta name="theme-color" content="#0B0F19" />
 
     <!-- Schema -->
     <script type="application/ld+json">
@@ -93,9 +81,25 @@
         "inLanguage": "he-IL",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://rfglobal.co.il/blog/tax-guide-israeli-investors-us-real-estate.html"
+          "@id": "https://rfglobal.co.il/tax-guide-israeli-investors-us-real-estate/"
         }
       }
+    </script>
+
+    <!-- 📊 Google tag (GA4) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EVLN29Q0VB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EVLN29Q0VB", {
+        send_page_view: true,
+      });
     </script>
 
     <!-- Tailwind -->
@@ -106,8 +110,12 @@
         theme: {
           extend: {
             colors: {
-              primary: "#D4AF37",
-              background: "#0B0F19",
+              primary: "#bd8604",
+              brand: "#012b1a",
+              background: {
+                dark: "#0B0F19",
+                light: "#F5F7FB",
+              },
               surface: "#161b29",
               textPri: "#F0F0F0",
               textSec: "#A9A9A9",
@@ -122,18 +130,23 @@
         },
       };
     </script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Heebo:wght@400;600;700;900&family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <style>
       body {
         background: #0b0f19;
       }
-      .chicle-regular {
-        font-family: "Chicle", serif;
-        font-weight: 400;
-        font-style: normal;
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
       }
     </style>
   </head>
@@ -420,7 +433,7 @@
               class="h-16 w-20 flex-shrink-0 rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div class="min-w-0">
-              <p class="text-xs text-textSec mb-1 hover:text-[#012b1a]">
+              <p class="text-xs text-textSec mb-1 hover:text-[#bd8604]">
                 הקודם
               </p>
               <p
@@ -438,12 +451,11 @@
           >
             <img
               src="/assets/blog1.png"
-              alt="
-              המדריך למשקיעים ישראלים בסינסינטי"
+              alt="המדריך למשקיעים ישראלים בסינסינטי"
               class="h-16 w-20 flex-shrink-0 rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div class="min-w-0">
-              <p class="text-xs text-textSec mb-1 hover:text-[#012b1a]">הבא</p>
+              <p class="text-xs text-textSec mb-1 hover:text-[#bd8604]">הבא</p>
               <p
                 class="font-display text-white font-medium leading-snug line-clamp-2"
               >
@@ -485,7 +497,9 @@
               onsubmit="event.preventDefault()"
               class="mt-6 max-w-xl mx-auto flex flex-col sm:flex-row gap-2"
             >
+              <label for="blog_tax_nl" class="sr-only">אימייל</label>
               <input
+                id="blog_tax_nl"
                 type="email"
                 required
                 class="flex-1 rounded-xl bg-white/10 border border-white/20 px-4 py-3 placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
@@ -693,19 +707,17 @@
           <div class="order-1 sm:order-3 w-full sm:w-auto">
             Designed & Developed by
             <a
-              href="https://www.instagram.com/flammin.studio/"
-              class="chicle-regular text-[18px] text-[#ECD5BC] hover:text-[#4E3636]"
+              href="https://flammin.studio"
+              class="underline decoration-[#bd8604]/60 hover:text-[#fefefe]"
               target="_blank"
               rel="noopener"
-              >Flammin<span
-                class="chicle-regular text-[20px] text-[#CD1818] font-bold"
-                >.</span
-              >Studio</a
+              >Flammin.Studio</a
             >
           </div>
         </div>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
       (function () {

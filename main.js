@@ -1,7 +1,11 @@
+// =======================
+// 1) MOBILE NAV + YEARS
+// =======================
 (function () {
   // Year stamps (optional)
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
+
   const yearRF = document.getElementById("yearRF");
   if (yearRF) yearRF.textContent = new Date().getFullYear();
 
@@ -12,6 +16,7 @@
   const closeBtn = document.getElementById("closeMenu");
   const html = document.documentElement;
 
+  // If there's no mobile menu on this page – exit
   if (!btn || !panel || !backdrop) return;
 
   // We animate via translate, not display
@@ -63,18 +68,24 @@
     .forEach((a) => a.addEventListener("click", closeMenu));
 })();
 
+// =======================
+// 2) SCROLL ANIMATIONS
+// =======================
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const sections = ["#how", "#models", "#about"];
+
   sections.forEach((sel) => {
     const root = document.querySelector(sel);
     if (!root) return;
+
     if (reduce) {
       root.querySelectorAll("[data-animate]").forEach((el) => {
         el.style.opacity = 1;
       });
       return;
     }
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -90,15 +101,20 @@
       },
       { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
     );
+
     root.querySelectorAll("[data-animate]").forEach((el) => io.observe(el));
   });
 })();
 
+// =======================
+// 3) INVESTMENT CALCULATOR (Chart.js)
+// =======================
 (function () {
   // Guard: need Chart.js
   if (!window.Chart) return;
 
   const el = (id) => document.getElementById(id);
+
   const form = el("rf-calc-form");
   const startAmount = el("startAmount");
   const duration = el("duration");
@@ -108,8 +124,27 @@
   const result = el("result");
   const btn = el("calcBtn");
 
-  const donutCtx = document.getElementById("rf-donut").getContext("2d");
-  const lineCtx = document.getElementById("rf-line").getContext("2d");
+  const donutCanvas = el("rf-donut");
+  const lineCanvas = el("rf-line");
+
+  // If any of the core elements are missing, do nothing on this page
+  if (
+    !form ||
+    !startAmount ||
+    !duration ||
+    !durationType ||
+    !roi ||
+    !currencySel ||
+    !result ||
+    !btn ||
+    !donutCanvas ||
+    !lineCanvas
+  ) {
+    return;
+  }
+
+  const donutCtx = donutCanvas.getContext("2d");
+  const lineCtx = lineCanvas.getContext("2d");
   let donutChart, lineChart;
 
   const prefersReduced = window.matchMedia(
@@ -151,7 +186,7 @@
 
     const interest = Math.max(0, total - start);
 
-    // Render Donut
+    // Donut
     if (donutChart) donutChart.destroy();
     donutChart = new Chart(donutCtx, {
       type: "doughnut",
@@ -183,7 +218,7 @@
       },
     });
 
-    // Render Line
+    // Line
     if (lineChart) lineChart.destroy();
     lineChart = new Chart(lineCtx, {
       type: "line",
@@ -242,7 +277,9 @@
   calc();
 })();
 
-// --- Properties filtering ---
+// =======================
+// 4) PROPERTIES FILTERING
+// =======================
 document.addEventListener("DOMContentLoaded", () => {
   const filters = document.getElementById("propFilters");
   if (!filters) return;
@@ -337,47 +374,68 @@ document.addEventListener("DOMContentLoaded", () => {
   applyFilter(initialBtn.getAttribute("data-filter"));
 });
 
-// Privacy Policy === Scroll-Spy for Table of Contents ===
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("aside nav a");
+// =======================
+// 5) PRIVACY PAGE – SCROLL SPY
+// =======================
+(function () {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("aside nav a");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const id = entry.target.getAttribute("id");
-      const link = document.querySelector(`aside nav a[href="#${id}"]`);
-      if (entry.isIntersecting) {
+  if (!sections.length || !navLinks.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const id = entry.target.getAttribute("id");
+        const link = document.querySelector(`aside nav a[href="#${id}"]`);
+        if (!link) return;
+
         navLinks.forEach((a) =>
           a.classList.remove("text-primary", "font-bold")
         );
         link.classList.add("text-primary", "font-bold");
-      }
-    });
-  },
-  {
-    threshold: 0.45,
-    rootMargin: "-10% 0px -55% 0px", // triggers a bit before midpoint
+      });
+    },
+    {
+      threshold: 0.45,
+      rootMargin: "-10% 0px -55% 0px", // triggers a bit before midpoint
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+})();
+
+// =======================
+// 6) EMAILJS – INIT
+// =======================
+(function () {
+  // Make sure EmailJS SDK is loaded in the page <head>:
+  // <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+  // <script> emailjs.init("g6avWLMCkf8684pQ0"); </script>
+  // We defensively init here too if needed.
+  if (window.emailjs && typeof emailjs.init === "function") {
+    try {
+      emailjs.init("g6avWLMCkf8684pQ0");
+    } catch (e) {
+      console.warn("EmailJS init failed or already initialized:", e);
+    }
   }
-);
+})();
 
-sections.forEach((section) => observer.observe(section));
-
-// Blog Page Script--year
-document.getElementById("yearRF").textContent = new Date().getFullYear();
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-//EmailJS Contact Form integration
+// =======================
+// 7) EMAILJS – CONTACT FORM
+// =======================
 document.addEventListener("DOMContentLoaded", function () {
-  let contactForm =
+  // Try to grab a dedicated contact form first
+  const contactForm =
     document.getElementById("contact-form") ||
-    document.querySelector('form[action=""]') ||
-    document.querySelector("form");
+    document.querySelector('form[data-form-type="contact"]');
 
-  // If no form exists on this page, stop.
-  if (!contactForm) return;
+  // If no contact form on this page, do nothing
+  if (!contactForm || !window.emailjs) return;
 
-  // Attach submit handler
   contactForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
@@ -386,24 +444,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       const result = await emailjs.send(
-        //IDs from EmailJS dashboard
-        "service_j2l5cxc",
-        "template_owwselb",
+        "service_j2l5cxc", // SERVICE ID
+        "template_owwselb", // CONTACT TEMPLATE ID
         templateParams
       );
 
-      console.log("SUCCESS:", result.text);
+      console.log("EmailJS SUCCESS:", result.text);
       alert("הטופס נשלח בהצלחה. נחזור אליכם בהקדם!");
       contactForm.reset();
     } catch (error) {
-      console.error("FAILED:", error);
+      console.error("EmailJS FAILED:", error);
       alert("תקלה בשליחה — נסו שוב או פנו אלינו במייל.");
     }
   });
 });
 
-//EmailJS Newsletter signup
+// =======================
+// 8) EMAILJS – NEWSLETTER FORMS
+// =======================
 document.addEventListener("DOMContentLoaded", function () {
+  if (!window.emailjs) return;
+
   const SERVICE_ID = "service_j2l5cxc";
   const TEMPLATE_NEWS = "template_vhhgiw9";
 
@@ -442,15 +503,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Blog CTA newsletter
+  // Blog CTA newsletter – expects <input id="blog_nl" ...>
   const blogNewsletterForm = document
-    .querySelector("form #blog_nl")
+    .querySelector("#blog_nl")
     ?.closest("form");
   handleNewsletterForm(blogNewsletterForm, "CTA Section");
 
-  // Footer newsletter
+  // Footer newsletter – expects <input id="nl_footer" ...>
   const footerNewsletterForm = document
-    .querySelector("form #nl_footer")
+    .querySelector("#nl_footer")
     ?.closest("form");
   handleNewsletterForm(footerNewsletterForm, "Footer");
 });

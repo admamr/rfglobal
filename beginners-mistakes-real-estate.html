@@ -6,6 +6,7 @@
     <title>
       הטעויות הנפוצות למשקיע המתחיל בנדל״ן בארה״ב (ואיך להימנע מהן) | RF-Global
     </title>
+
     <link
       href="/assets/RF-Global-Logo-Icon.jpg"
       rel="icon"
@@ -19,8 +20,9 @@
     />
     <link
       rel="canonical"
-      href="https://rfglobal.co.il/blog/beginners-mistakes-real-estate.html"
+      href="https://rfglobal.co.il/beginners-mistakes-real-estate/"
     />
+    <meta property="og:locale" content="he_IL" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="RF-Global" />
     <meta
@@ -33,7 +35,7 @@
     />
     <meta
       property="og:url"
-      content="https://rfglobal.co.il/blog/beginners-mistakes-real-estate.html"
+      content="https://rfglobal.co.il/beginners-mistakes-real-estate/"
     />
     <meta
       property="og:image"
@@ -52,6 +54,7 @@
       name="twitter:image"
       content="https://rfglobal.co.il/assets/blog/beginners-feature.jpg"
     />
+    <meta name="theme-color" content="#0B0F19" />
 
     <!-- Article Schema -->
     <script type="application/ld+json">
@@ -76,9 +79,25 @@
         "inLanguage": "he-IL",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://rfglobal.co.il/blog/beginners-mistakes-real-estate.html"
+          "@id": "https://rfglobal.co.il/beginners-mistakes-real-estate/"
         }
       }
+    </script>
+
+    <!-- 📊 Google tag (GA4) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EVLN29Q0VB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EVLN29Q0VB", {
+        send_page_view: true,
+      });
     </script>
 
     <!-- Tailwind (with typography) -->
@@ -89,8 +108,12 @@
         theme: {
           extend: {
             colors: {
-              primary: "#D4AF37",
-              background: "#0B0F19",
+              primary: "#bd8604",
+              brand: "#012b1a",
+              background: {
+                dark: "#0B0F19",
+                light: "#F5F7FB",
+              },
               surface: "#161b29",
               textPri: "#F0F0F0",
               textSec: "#A9A9A9",
@@ -105,13 +128,24 @@
         },
       };
     </script>
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Heebo:wght@400;600;700;900&family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <style>
       body {
         background: #0b0f19;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
       }
     </style>
   </head>
@@ -395,11 +429,14 @@
           <li>בדיקות שטח ודו״חות KPI לפני ואחרי רכישה.</li>
           <li>מפרט שיפוץ סגור, תמחור רב-קבלני ופיקוח.</li>
           <li>ניהול נכס שקוף עם מדדים, ודיווח חודשי מסודר.</li>
+        </ul>
       </article>
 
       <!-- Prev / Next -->
       <section class="mt-16">
-        <h2 class="text-center text-2xl font-display font-bold text-[#bd8604] mb-6">
+        <h2
+          class="text-center text-2xl font-display font-bold text-[#bd8604] mb-6"
+        >
           מאמרים נוספים שיכולים לעניין אתכם
         </h2>
         <nav class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -414,7 +451,9 @@
               class="h-16 w-20 flex-shrink-0 rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div class="min-w-0">
-              <p class="text-xs text-textSec mb-1 hover:text-[#bd8604]">הקודם</p>
+              <p class="text-xs text-textSec mb-1 hover:text-[#bd8604]">
+                הקודם
+              </p>
               <p
                 class="font-display text-white font-medium leading-snug line-clamp-2"
               >
@@ -695,6 +734,7 @@
         </div>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
       (function () {
@@ -702,7 +742,6 @@
       })();
     </script>
     <script src="/assets/js/email.js"></script>
-
-      <script src="/main.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>

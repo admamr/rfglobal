@@ -10,9 +10,48 @@
       type="image/x-icon"
     />
 
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="הבלוג של RF-Global: תובנות, מדריכים וניתוחים על שוק הנדל״ן בארה״ב, סינסינטי והזדמנויות השקעה למשקיעים ישראלים."
+    />
+    <link rel="canonical" href="https://rfglobal.co.il/blog/" />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="הבלוג שלנו – RF-Global" />
+    <meta
+      property="og:description"
+      content="מאמרים, מדריכים וניתוחים עמוקים על השקעות נדל״ן בארה״ב, עם דגש על סינסינטי והזדמנויות למשקיעים ישראלים."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://rfglobal.co.il/blog/" />
+    <meta name="theme-color" content="#0B0F19" />
+
+    <!-- 🔎 Google Search Console (replace with your real code) -->
+    <meta
+      name="google-site-verification"
+      content="YOUR_GSC_VERIFICATION_CODE"
+    />
+
+    <!-- 📊 Google tag (GA4) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EVLN29Q0VB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EVLN29Q0VB", {
+        send_page_view: true,
+      });
+    </script>
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -20,7 +59,10 @@
             colors: {
               primary: "#bd8604",
               brand: "#012b1a",
-              background: "#0B0F19",
+              background: {
+                dark: "#0B0F19",
+                light: "#F5F7FB",
+              },
               surface: "#111726",
               muted: "#2a3042",
             },
@@ -52,11 +94,7 @@
     />
 
     <style>
-      body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      tml {
+      html {
         scroll-behavior: smooth;
       }
       body {
@@ -284,7 +322,6 @@
             background-size: cover;
             background-position: center;
           "
-          loading="lazy"
         ></div>
         <div class="relative z-10 px-6 sm:px-10 py-16 sm:py-24 text-center">
           <h1
@@ -320,7 +357,6 @@
               <li>
                 <a
                   href="#"
-                  aria-label="גלילה למטה"
                   class="group flex items-center gap-3 hover:text-primary transition"
                 >
                   <span
@@ -570,7 +606,6 @@
               background-size: cover;
               background-position: center;
             "
-            loading="lazy"
           ></div>
           <div class="relative z-10 p-8 sm:p-12 text-center">
             <h3 class="text-2xl sm:text-3xl font-black tracking-tight">
@@ -729,7 +764,7 @@
               <li>
                 <a
                   class="hover:text-[#fefefe]"
-                  href="/our-blog/us-real-estate-market-analysis-2025/"
+                  href="/us-real-estate-market-analysis-2025/"
                   >ניתוח שוק הנדל״ן בארה״ב 2025</a
                 >
               </li>
